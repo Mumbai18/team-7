@@ -108,80 +108,9 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    function modalfunc(type)
-    {
-      var divlist;
-      if(type==1)
-      {
-        divlist = document.getElementById('folist');
-      }
-      else {
-        divlist = document.getElementById('folist2');
-      }
-      while (divlist.firstChild) {
-        divlist.removeChild(divlist.firstChild);
-      }
-      var xmlhttp=new XMLHttpRequest();
-      if(type==1)
-      {
-        xmlhttp.open("GET","followlist.php?id="+<?php echo $user_id; ?>,false);
-      }
-      else {
-        xmlhttp.open("GET","followinglist.php?id="+<?php echo $user_id; ?>,false);
-      }
-      xmlhttp.send(null);
-      var userdata=xmlhttp.responseText;
-      var userarr = userdata.split("/");
-      for(i=0;i<userarr.length-1;i++)
-      {
-        var a = document.createElement('div'),
-        img = document.createElement('img'),
-        span =document.createElement('span'),
-        button =document.createElement('button');
-        a.class="row";
-        a.style="padding:10px;"
-        var subuser=userarr[i].split("~");
-        span.innerHTML=subuser[1];
-        span.style="margin-left:10px;";
-        var uid=subuser[0];
-        if(subuser[0].substring(0,7)=="default")
-        {
-          uid=subuser[0].substring(7);
-          subuser[0]="default";
-        }
-        img.src='images/users/'+subuser[0]+'.jpg';
-        img.height="50";
-        img.width="50";
-        button.id="button"+uid;
-        button.type="button";
-        button.style="background:green;color:white;float:right;margin-top:10px;"
-        button.class="btn btn-success";
-        button.innerHTML=subuser[2];
-        var currbutton= document.getElementById("button"+uid);
-        button.addEventListener("click", function(){followinc(this.id);}, false);
-        a.appendChild(img);
-        a.appendChild(span);
-        if(subuser[2]!="")
-          a.appendChild(button);
-        divlist.appendChild(a);
-      }
-    }
 
-    function followinc(id)
-    {
-      var xmlhttp=new XMLHttpRequest();
-      xmlhttp.open("GET","followajax.php?id="+id.substring(6),false);
-      xmlhttp.send(null);
-      var userdata=xmlhttp.responseText;
-      if(userdata=="pass")
-      {
-        var currbutton=document.getElementById(id);
-        currbutton.innerHTML="Following";
-      }
 
-    }
-  </script>
+
 
   <div class="content-wrapper">
     <div class="row" style="background-color:#ecf0f5;height:5px;"></div>
@@ -193,9 +122,8 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <div class="row">
               <!-- /.col -->
-              <div class="col-md-3 pro-box" style="">
+              <div class="col-md-6 pro-box" style="">
                 <h3 class="text-center" style="font-size:20px;margin-top:10px"><b><?php echo $rows["firstname"].' '.$rows["surname"];?></b></h3>
                 <div class="profile-picture text-center">
                   <img src="images/users/<?php
@@ -245,7 +173,7 @@
               <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Memoronda</b></h3>
               <div class="pm col-md-5" style="display:flex;justify-content:center;">
                 <div class="pmi profile-info" >
-                  <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>Personal Memoronda</b></h4>
+                  <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>Personal Memoronda</b></h4><br>
                   <span style="font-size:16px;"><b>Name:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
                   <span style="font-size:16px;"><b>Email ID:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
                   <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
@@ -254,170 +182,20 @@
                   <span style="font-size:16px;"><b>Member Since:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
                 </div>
               </div>
-
-              <!-- /.chart-responsive -->
-              <div class="col-md-4">
-                <!-- USERS LIST -->
-                <div class="box " style="border-top:0;">
-                  <div class="box-header text-center">
-                    <h3 class="box-title" style="font-size:20px;"><b><?php
-                    if($user_type==1)
-                    {
-                      $sug=2;
-                      $sugs='Dr. ';
-                      echo 'Suggested Doctors';
-                    }
-                    else if($user_type==2)
-                    {
-                      $sug=3;
-                      $sugs='Ch. ';
-                      echo 'Suggested Chemist';
-                    }
-                    else{
-                      $sugs='Dr. ';
-                      $sug=2;
-                      echo 'Nearby Doctors';
-                    }
-                    ?></b></h3>
-
-                  </div>
-                  <!-- /.box-header -->
-                  <div class="box-body no-padding">
-                    <ul class="users-list clearfix">
-                      <?php
-                      $people="SELECT * FROM login WHERE type='".$sug."' ORDER BY RAND() LIMIT 4";
-                      $people_run=mysqli_query($con,$people);
-                      $people_count=mysqli_num_rows($people_run);
-                      while($people_query=mysqli_fetch_assoc($people_run))
-                      {
-                        ?>
-                        <li>
-                          <img src="images/users/<?php
-                          if(file_exists('images/users/'.$people_query['id'].'.jpg'))
-                          {
-                            echo $people_query['id'];
-                          }
-                          else
-                          {
-                            echo 'default';
-                          }
-                          ?>.jpg" alt="User Image" height="63" width="63">
-                          <a class="users-list-name" href="profile.php?id=<?php echo $people_query['id'];?>"><?php echo $sugs.$people_query['firstname']?></a>
-                          <span class="users-list-date"><?php echo $people_query['view'].' Views';?></span>
-                        </li>
-                        <?php
-                      }
-                      ?>
-                    </ul>
-                    <!-- /.users-list -->
-                  </div>
-                  <!-- /.box-body -->
-                  <div class="box-footer text-center">
-                    <a href="javascript:void(0)" class="uppercase">View All</a>
-                  </div>
-                  <!-- /.box-footer -->
+                            <!-- /.col -->
+              <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Memoronda</b></h3>
+              <div class="pm col-md-12" style="display:flex;justify-content:center;">
+                <div class="pmi profile-info" >
+                  <span style="font-size:16px;"><b>Adhar card:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
+                  <span style="font-size:16px;"><b>Father's Name</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
+                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
+                  <span style="font-size:16px;"><b>Mother's Name</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
+                  <span style="font-size:16px;"><b>Birth Date:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
+                  <span style="font-size:16px;"><b>Member Since:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
                 </div>
-                <!--/.box -->
               </div>
 
             </div>
-            <!-- /.row -->
-          </div>
-          <!-- ./box-body -->
-          <div class="box-footer">
-            <div class="row">
-              <div class="col-sm-3 col-xs-6">
-                <div class="description-block border-right">
-                  <h5 class="description-header text-green"><i class="fa fa-user"></i> &nbspFollowers</h5>
-                  <span class="description-text">
-                    <?php
-                    $follow=$rows['follow'];
-                    $x= explode(',',$follow);
-                    $a=0;
-                    foreach($x as $x_a)
-                    {
-                      $a++;
-                    }
-                    $b=$a-1;
-                    echo $b.'<br><a href="#" id="followers" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="modalfunc(1);">See all</a>';
-                    ?>
-                  </span>
-                </div>
-                <!-- /.description-block -->
-              </div>
-              <!-- /.col -->
-              <div class="col-sm-3 col-xs-6">
-                <div class="description-block border-right">
-                  <h5 class="description-header text-blue"><i class="fa fa-user"></i> &nbspFollowing</h5>
-                  <span class="description-text">
-                    <?php
-                    $query="SELECT follow FROM login";
-                    $query_run=mysqli_query($con,$query);
-                    $a=0;
-                    while($query_array=mysqli_fetch_assoc($query_run))
-                    {
-                      $follow=$query_array['follow'];
-                      $x= explode(',',$follow);
-
-                      foreach($x as $x_a)
-                      {
-                        if($x_a==$user_id)
-                        {
-                          $a++;
-                        }
-                      }
-                    }
-                    $b=$a;
-                    echo $b.'<br><a href="#" id="followers" data-toggle="modal" data-target=".bd-example-modal-lg2" onclick="modalfunc(2);">See all</a>';
-                    ?>
-                  </span>
-                </div>
-                <!-- /.description-block -->
-              </div>
-              <!-- /.col -->
-              <div class="col-sm-3 col-xs-6">
-                <div class="description-block border-right">
-                  <h5 class="description-header text-red"><i class="fa fa-newspaper-o"></i> &nbspForum Post</h5>
-                  <span class="description-text">
-                    <?php
-                    $forquery="SELECT * FROM forum_question WHERE id='".$user_id."'";
-                    $forquery_run=mysqli_query($con,$forquery);
-                    echo $nocount=mysqli_num_rows($forquery_run);
-                    ?>
-                  </span>
-                </div>
-                <!-- /.description-block -->
-              </div>
-              <!-- /.col -->
-              <div class="col-sm-3 col-xs-6">
-                <div class="description-block">
-                  <h5 class="description-header text-yellow"><i class="fa fa-cart-plus"></i> &nbspUser Type</h5>
-                  <span class="description-text">
-                    <?php
-                    if($user_type==1)
-                    {
-                      echo 'Patient';
-                    }
-                    else if($user_type==2)
-                    {
-                      echo 'Doctor';
-                    }
-                    else if($user_type==3)
-                    {
-                      echo 'Chemist';
-                    }
-                    else
-                    {
-                      echo 'Medical Equipment';
-                    }
-                    ?>
-                  </span>
-                </div>
-                <!-- /.description-block -->
-              </div>
-            </div>
-            <!-- /.row -->
-          </div>
           <!-- /.box-footer -->
         </div>
         <!-- /.box -->
@@ -430,96 +208,8 @@
     <div class="row" style="margin:10px -7px; ">
       <!-- Left col -->
 
-      <!-- /.col -->
-
-      <div class="col-md-7 col-md-offset-1 forum">
-        <!-- Info Boxes Style 2 -->
-
-        <!-- PRODUCT LIST -->
-        <div class="box box-primary" style="border-top-color:#d2d6de;">
-          <div class="box-header with-border bg-title" style="">
-            <h3 class="box-title" style="color:white;">Forum Created by  <?php echo $rows["firstname"].' '.$rows["surname"];?></h3>
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body">
-            <ul class="products-list product-list-in-box">
-              <?php
-              while($forum_rows=mysqli_fetch_assoc($forquery_run))
-              {
-                ?>
-                <li class="item">
-                  <div>
-                    <div class="product-img">
-                      <img src="images/forum/<?php
-                      if(file_exists('images/products/'.$forum_rows['topic_id'].'.jpg'))
-                      {
-                        echo $forum_rows['topic_id'];
-                      }else
-                      {
-                        echo 'defaultnew';
-                      }
-                      ?>.jpg" style="width:75px;height:75px;" alt="Product Image">
-                    </div>
-                    <div class="product-info" style="margin-left:90px;">
-                      <a href="view_topic.php?id=<?php echo $forum_rows['topic_id']; ?>" class="product-title" style="font-size:16px;"><?php echo $forum_rows["topic"]; ?>
-                        <span class="label pull-right " style="color:#999999;"><?php echo $forum_rows["datetime"]; ?></span>
-                      </a>
-                      <span class="product-description">
-                        <?php echo $forum_rows["detail"]; ?>
-                      </span>
-                    </div>
-                  </div>
-                  <br><br>
-                  <span style="margin-top:3px;font-size:12px;" class="label label-success pull-left"><?php echo $forum_rows["view"]; ?> </span> <b style="margin-top:3px;">&nbsp Views</b>
-                  <span style="margin-top:3px;font-size:12px;margin-left:5px" class="label label-danger "><?php echo $forum_rows["reply"]; ?></span><b style="margin-top:3px;">&nbsp Replies</b>
-                </li>
-                <?php
-              }
-              ?>
-              <!-- /.item -->
-            </ul>
-          </div>
-          <!-- /.box-body -->
-          <div class="box-footer text-center">
-            <a href="main_forum.php" class="uppercase">View the Complete Forum Page</a>
-          </div>
-          <!-- /.box-footer -->
-        </div>
-        <!-- /.box -->
-      </div>
-      <!-- /.col -->
-      <div class="col-md-3 forum2" style="" >
-        <div class="box box-default">
-          <div class="box-header with-border bg-title" style="">
-            <h3 class="box-title" style="color:white;">Most Popular Forum</h3>
 
 
-          </div>
-          <!-- /.box-header -->
-
-          <!-- /.box-body -->
-          <div class="box-footer no-padding">
-            <ul class="nav nav-pills nav-stacked">
-              <?php
-              $forquery1="SELECT * FROM forum_question ORDER BY view DESC LIMIT 5";
-              $forquery_run1=mysqli_query($con,$forquery1);
-              $nocount1=mysqli_num_rows($forquery_run1);
-              while($for_query1=mysqli_fetch_assoc($forquery_run1))
-              {
-                ?>
-                <li ><a href="view_topic.php?id=<?php echo $for_query1['topic_id'];?>" style="height:40px;"><?php echo $for_query1['topic'];?>
-                  <span class="pull-right text-green"><?php echo $for_query1['view'].' Views';?></span></a>
-                </li>
-                <?php
-              }
-              ?>
-            </ul>
-          </div>
-          <!- - /.footer -->
-        </div>
-        <!-- /.box -->
-      </div>
-    </div>
     <!-- /.row -->
     <?php
       $queryus="SELECT type FROM login WHERE id='".$user_id."'";
@@ -596,74 +286,9 @@
     if($rowus['type']==$rowus['type'])
     {
   ?>
-<div class="row">
 
-    <div class="col-md-7 col-md-offset-1 forum">
-      <!-- Info Boxes Style 2 -->
-
-      <!-- PRODUCT LIST -->
-      <div class="box box-primary" style="border-top-color:#d2d6de;">
-        <div class="box-header with-border bg-title" style="">
-          <h3 class="box-title" style="color:white;">Patient's Reports</h3>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div>
-        <form class="form-horizontal" id="form1" name="form1" method="post" action="file_upload.php" enctype="multipart/form-data">
-          <div class="box-body">
-              <div class="form-group">
-                    <table class="table table-striped">
-                    <?php
-                    $directory = "images/files/";
-                      $images = glob($directory.$user_id."/*.*");
-                      $i=0;
-                      foreach($images as $image){
-                        echo '
-                        <tr>
-                        <td>
-                          <img src="'.$image.'" height="100px" width="100px" role="button"   data-toggle="modal" data-target="#exampleModal'.$i.'"/><br><br>
-                          <div class="modal" tabindex="-1" role="dialog" id="exampleModal'.$i.'">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h3 class="modal-title">Your Report</h3>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <p><img src="'.$image.'" height="100%" width="100%"/></p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        </tr>';
-                        $i++;
-                      }
-
-                    ?>
-                    </table>
-              </div>
-          </div>
-
-          <!-- /.box-body -->
-          <div class="box-footer">
-            <?php if($user_type==1){?><a href="file_upload.php"><button type="button" class="btn btn-default">Upload Report</button></a>
-          <?php } ?>
-          </div>
-          <!-- /.box-footer -->
-        </form
-          </div>
-        </div>
         <!-- /.box-body -->
 
-      </div>
-      <!-- /.box -->
     </div>
 </div>
 <?php
