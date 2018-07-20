@@ -178,7 +178,7 @@
             <form class="form-horizontal" id="form1" name="form1" method="post" action="file_upload.php" enctype="multipart/form-data">
               <div class="box-body">
                   <div class="form-group">
-                        <label for="exampleInputFile">Upload Forum Photo</label>
+                        <label >Upload Income certificate</label>
                         <input id="exampleInputFile" name="file" type="file">
                         <p class="help-block">Upload your file here.</p>
                         <table class="table table-striped">
@@ -210,7 +210,7 @@
                                 </div>
                               </div>
                             </td>
-                            </tr>';
+							</tr>';
                           }
 
                         ?>

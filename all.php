@@ -8,7 +8,7 @@ require 'assets/backend/data.php';
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Online MD</title>
+  <title>Educon</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -45,9 +45,9 @@ require 'assets/backend/data.php';
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>OMD</b></span>
+      <span class="logo-mini"><b>Educon</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Online</b> MD</span>
+      <span class="logo-lg"><b>Edu</b>Con</span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -67,7 +67,7 @@ require 'assets/backend/data.php';
           <?php
             $messt="SELECT messtime FROM login WHERE id='$user_id'";
          	  $messtrun=mysqli_query($con,$messt);
-         	  $messtrows=mysqli_fetch_assoc($messtrun);
+         	  @$messtrows=mysqli_fetch_assoc($messtrun);
          	  $messtime=$messtrows['messtime'];
             $noofmess="SELECT DISTINCT sen_id FROM message WHERE date>'$messtime' AND rec_id='$user_id'";
          	  $noofmess_run=mysqli_query($con,$noofmess);
@@ -305,15 +305,14 @@ require 'assets/backend/data.php';
       <ul class="sidebar-menu">
       <li class="header">What we have</li>
         <li><a href="profile.php"><i class="fa fa-user"></i> <span>Your Profile</span></a></li>
-        <li><a href="live.php"><i class="fa fa-calendar-o"></i> <span>Live Streaming</span></a></li>
-        <?php       if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==2){ echo '<li><a href="livet.php"><i class="fa fa-calendar"></i> <span>Start a Live Lecture Stream</span></a></li>';}}?>
-        <li><a href="med_store.php"><i class="fa fa-shopping-cart"></i> <span>Medical E-Store</span></a></li>
-        <li><a href="main_forum.php"><i class="fa fa-foursquare"></i> <span>Medical Forum</span></a></li>
-        <li><a href="chat.php"><i class="fa fa-whatsapp"></i> <span>Chat with Doctors</span></a></li>
-        <li><a href="med_find.php"><i class="fa fa-search"></i> <span>Medicine Search</span></a></li>
-        <li><a href="medicine.php?type=doctor"><i class="fa fa-search"></i> <span>Doctors Search</span></a></li>
-        <li><a href="medicine.php?type=pharmacy"><i class="fa fa-search"></i> <span>Chemist Search</span></a></li>
-        <li><a href="medicine.php?type=hospital"><i class="fa fa-search"></i> <span>Hospital Search</span></a></li>
+        <li><a href="#"><i class="fa fa-calendar-o"></i> <span>Check Application Status</span></a></li>
+        <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==2){ ?>
+          <li><a href="#"><i class="fa fa-calendar"></i> <span>Review Application</span></a></li>
+        <?
+        }
+          }
+        ?>
+        <li><a href="#"><i class="fa fa-shopping-cart"></i> <span>Apply for Application</span></a></li>
         <li class="header">About Us</li>
         <li><a href=""><i class="fa fa-phone"></i> <span>Contact Us</span></a></li>
         <li><a href="">&nbsp<i class="fa fa-info "></i> <span>About IM</span></a></li>

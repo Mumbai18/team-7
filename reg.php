@@ -17,7 +17,7 @@
   <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper" style="background-image:url('images/backgrounds/1.jpg');padding-bottom:2%;background-repeat: no-repeat;background-size: cover;" >
       <div class="row" style="margin:0 3%;">
-        
+
         <?php
           if(!isset($_SESSION['user_id']) && empty($_SESSION['user_id']))
           {
@@ -27,7 +27,7 @@
           <div class="form-box" >
             <div class="form-top">
               <div class="form-top-left">
-                <?php 
+                <?php
                     echo '<h3>Sign up now</h3>
                     <p>Register below to get instant access:</p>';
                 ?>
@@ -39,37 +39,41 @@
             <div class="form-bottom" style="display:<?php if(($_GET['redirect'])=='reg'){echo'none';}?>;">
                 <form role="form" action="login_reg_scripts/proreg.php" method="post" class="registration-form">
                   <div class="form-group">
-                    <label class="sr-only" for="form-first-name">First name</label>
+                    <label class="sr-only" for="form-Institution name">Institution name</label>
                       <input type="text" name="firstname1" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-                  </div> 
+                  </div>
                   <div class="form-group">
-                    <label class="sr-only" for="form-last-name">Last name</label>
+                    <label class="sr-only" for="Previous  Education">Previous Education</label>
                       <input type="text" name="surname1" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
                   </div>
                   <div class="form-group">
-                    <label class="sr-only" for="form-email">Email</label>
+                    <label class="sr-only" for="form-email">Aiming to persue </label>
                     <input type="text" name="email1" placeholder="Email..." class="form-email form-control" id="form-email">
                   </div>
                   <div class="form-group">
-                    <label class="sr-only" for="form-email">Password</label>
-                    <input type="password" name="password1" placeholder="Password..." class="form-email form-control" id="form-email">
+                    <label class="sr-only" for="form-email">Id card</label>
+                    <input type="text" name="password1" placeholder="Password..." class="form-email form-control" id="form-email">
                   </div>
                   <div class="form-group">
                     <label class="sr-only" for="form-email">Confirm Password</label>
                     <input type="password" name="password2" placeholder="Confirm Password..." class="form-email form-control" id="form-email">
                   </div>
                   <div class="form-group">
-                    <label class="sr-only" for="form-first-name">Disease</label>
-                      <input type="text" name="disease" placeholder="Disease..." class="form-first-name form-control" id="form-first-name">
-                  </div> 
+                    <label class="sr-only" for="form-first-name"></label>
+                      <input type="text" name="aadhar" placeholder="Aadhar No..." class="form-first-name form-control" id="form-first-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="form-first-name"></label>
+                      <input type="text" name="income" placeholder="Income..." class="form-first-name form-control" id="form-first-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="form-first-name"></label>
+                      <input type="text" name="result" placeholder="Latest Result..." class="form-first-name form-control" id="form-first-name">
+                  </div>
                   <div class="form-group"  style="display: none;">
                     <label class="sr-only" for="form-first-name"></label>
                       <input type="text" value="1" name="type" placeholder="" class="form-first-name form-control" id="form-first-name">
-                  </div> 
-                  <div style="color:white;" class="form-group">
-                    <h4>Your Location</h4>
                   </div>
-                  <?php include 'Maps/locationpick.php';?>
                   <div style="color:white;" class="form-group">
                     <h4>Gender</h4>
                   </div>
