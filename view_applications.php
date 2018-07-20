@@ -73,26 +73,44 @@
     <div class="row" style="background-color:#ecf0f5;height:5px;"></div>
     <div class="row topinfo">
       <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
-        <div class="box boxzol" style="">
-          <div class="box-header with-border bg-title2" style="">
-            <h2 class="box-title" style="font-size:22px;color:white;">Admin Guy's Profile</h2>
-          </div>
+        <div class="box boxzol" style=" margin-top:10px">
           <!-- /.box-header -->
-          <div class="box-body">
-            <div class="row">
-              <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Memoronda</b></h3>
-              <div class="pm col-md-5" style="display:flex;justify-content:center;">
-                <div class="pmi profile-info" >
-                  <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>Personal Memoronda</b></h4>
-                  <span style="font-size:16px;"><b>Name:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
-                  <span style="font-size:16px;"><b>Email ID:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
-                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
-                  <span style="font-size:16px;"><b>Gender:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
-                  <span style="font-size:16px;"><b>Birth Date:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
-                  <span style="font-size:16px;"><b>Member Since:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
+                <div class="box-body">
+                  <div class="row">
+                    <div class="col-md-3 pro-box" style="">
+                <h3 class="text-center" style="font-size:20px;margin-top:10px"><b><?php echo $rows["firstname"].' '.$rows["surname"];?></b></h3>
+                  <div class="profile-picture text-center">
+                    <img src="images/users/<?php
+                    if(file_exists('images/users/'.$user_id.'.jpg'))
+                    {
+                      echo $user_id;
+                    }
+                    else
+                    {
+                      echo 'default';
+                    }
+                    ?>.jpg" class="img-circle" width="100px" height="100px">
+                    </div>
                 </div>
-              </div>
-            </div>
+
+                      <!-- <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Details</b></h3> -->
+                    <div class="pm col-md-5" style="display:flex;justify-content:center;">
+                      <div class="pmi profile-info" >
+                        <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>Personal Details</b></h4>
+                        <span style="font-size:16px;"><b>Name:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
+                        <span style="font-size:16px;"><b>Email ID:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
+                        <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
+                        <span style="font-size:16px;"><b>Gender:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
+                        <span style="font-size:16px;"><b>Birth Date:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
+                        <span style="font-size:16px;"><b>Member Since:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
+                      </div>
+                    </div>
+
+                    
+                    <div class="pmi text-center profile-info" style="display:flex; vertical-align: center; justify-content: center;">
+                    <button class="btn boxzol" onclick="window.open('profile.php')" >View Application</button>
+                  </div>
+                  </div>
             <!-- /.row -->
           </div>
           <!-- ./box-body -->
