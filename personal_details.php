@@ -130,7 +130,7 @@
                   </div>
 				  <div class="form-group">
                     <label for="form-username">DOB</label>
-                    <input type="text" name="dob" value="<?php echo $dob;?>" placeholder="DOB" class="form-username form-control" id="form-dob" >
+                    <input type="text" name="dob" value="<?php echo $dob;?>" placeholder="DOB" class="form-username form-control" id="form-dob" disabled>
                   </div>
 				  <div class="form-group">
                     <label for="form-username">Contact</label>

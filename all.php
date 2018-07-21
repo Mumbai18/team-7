@@ -290,7 +290,7 @@ require 'assets/backend/data.php';
       }
       ?>
       <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
+      <form action="Acadd.php" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="names" list="namelist" id="names" class="form-control" placeholder="Search..." onkeyup="searchnames();" oninput="linking();">
           <datalist id="namelist"></datalist>
@@ -312,7 +312,7 @@ require 'assets/backend/data.php';
         }
           }
         ?>
-        <li><a href="#"><i class="fa fa-shopping-cart"></i> <span>Apply for Application</span></a></li>
+        <li><a href="personal_details.php"><i class="fa fa-shopping-cart"></i> <span>Apply for Application</span></a></li>
         <li class="header">About Us</li>
         <li><a href=""><i class="fa fa-phone"></i> <span>Contact Us</span></a></li>
         <li><a href="">&nbsp<i class="fa fa-info "></i> <span>About IM</span></a></li>
