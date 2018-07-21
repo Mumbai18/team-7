@@ -308,7 +308,7 @@ require 'assets/backend/data.php';
         <li><a href="#"><i class="fa fa-calendar-o"></i> <span>Check Application Status</span></a></li>
         <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==2){ ?>
           <li><a href="#"><i class="fa fa-calendar"></i> <span>Review Application</span></a></li>
-        <?
+        <?php
         }
           }
         ?>
@@ -355,3 +355,5 @@ require 'assets/backend/data.php';
           }
         }
     </script>
+
+      
