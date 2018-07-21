@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 require_once('assets/backend/connect.php');
 
 $student_id = $_GET['id'];
-echo $student_id;
+// echo $student_id;
 $sqlQuery = "SELECT year,result,income FROM application WHERE id = ".$student_id. " ORDER BY year ";
 
 $result = mysqli_query($con,$sqlQuery);
@@ -13,7 +13,7 @@ $rows = array();
 while($r = mysqli_fetch_assoc($result)) {
     $rows[] = $r;
 }
-print json_encode($rows);
+// print json_encode($rows);
 
 // print_r($result);
 
