@@ -36,17 +36,17 @@
                 <i class="fa fa-pencil"></i>
               </div>
             </div>
-            <div class="form-bottom" style="display:<?php if(($_GET['redirect'])=='reg'){echo'none';}?>;">
-                <form role="form" action="login_reg_scripts/proreg.php" method="post" class="registration-form">
+            <div class="form-bottom">
+                <form role="form" action="login_reg_scripts/apply2.php" method="post" class="registration-form"  enctype="multipart/form-data">
                   <div class="form-group">
                     <label style="color:white;" for="form-Institution name">Institution name</label>
                       <input type="text" name="iname" placeholder=" " class="form-first-name form-control" id="form-first-name">
                   </div>
                   <div style="color:white;" class="form-group">
-                    <h5>Pursueing Field:</h5>
+                    <h5>Pursuing Field:</h5>
                   </div>
-                  <div class="form-group" >
-                    <select name="typeedu" style="width:50%;font-family: 'Roboto', sans-serif;color: #888;font-size: 16px;height: 50px;font-weight: 300;line-height: 50px;">
+                  <div class="form-group" style="width:100%">
+                    <select name="typeedu" style="width:100%; font-family: 'Roboto', sans-serif;color: #888;font-size: 16px;height: 50px;font-weight: 300;line-height: 50px;">
                       <option value="7th Std">7th Std</option><option value="8th Std">8th Std</option><option value="9th Std">9th Std</option>
                       <option value="10th Std">10th Std</option><option value="11th Std">11th Std</option><option value="12th">12th Std</option>
                       <option value="Grad 1st year">Graduation 1st Year</option>
@@ -56,11 +56,8 @@
                       <option value="Grad 5th year">Graduation 5th Year</option>
                     </select>
                   </div>
-                  <div class="form-group">
-                    <label style="color:white;" for="form-email">Id card</label>
-                    <input type="file" name="idcard" placeholder=" " class="form-email form-control" id="form-email">
-                  </div>
-                  <button type="submit" class="btn">Sign me up!</button>
+
+                  <button type="submit" class="btn">Submit!</button>
                 </form>
             </div>
           </div>

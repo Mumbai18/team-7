@@ -80,29 +80,27 @@
   }
 </style>
 
-<div class="content-wrapper" style="min-height: 669px;">
-    <div class="row" style="background-color:#ecf0f5;height:5px;"></div>
-    <div class="row topinfo">
-      <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
-        <div class="box boxzol" style="">
-          <div class="box-header with-border bg-title2" style="">
-            <h2 class="box-title" style="font-size:22px;color:white;">Student Details</h2>
-          </div>
+<div class="content-wrapper" style="background-image:url('images/backgrounds/1.jpg');padding-bottom:2%;background-repeat: no-repeat;background-size: cover;" >
+   
+    
+      
+          
           <!-- /.box-header -->
-          <div class="box-body" style="padding:16px">
-            <div class="row" style="min-height: 669px;background-image:url('images/backgrounds/1.jpg');padding-bottom:2%;background-repeat: no-repeat;background-size: cover;">
+          
+            <div class="row" style="min-height: 669px;background-image:url('images/backgrounds/1.jpg');background-repeat: no-repeat;background-size: cover;">
               <!---ADD your Code here-->
-				<div class="col-sm-5">
-          <div class="form-box">
+				<div class="col-sm-offset-3 col-sm-5">
+          <div class="form-box" align="center">
             <div class="form-top">
               <div class="form-top-left">
                 <h3>Personal Details</h3>
+				<p>Enter your details to apply for scholarship</p>
               </div>
               <div class="form-top-right">
-                <i class="fa fa-lock"></i>
+                <i class="fa fa-user"></i>
               </div>
             </div>
-            <div class="form-bottom">
+            <div class="form-bottom" style="margin-bottom:10%">
               <form role="form" action="login_reg_scripts/apply1.php" method="post" class="login-form">
                 <div class="form-group">
                     <label for="form-username">Name</label>
@@ -130,7 +128,7 @@
                   </div>
 				  <div class="form-group">
                     <label for="form-username">DOB</label>
-                    <input type="text" name="dob" value="<?php echo $dob;?>" placeholder="DOB" class="form-username form-control" id="form-dob" >
+                    <input type="text" name="dob" value="<?php echo $dob;?>" placeholder="DOB" class="form-username form-control" id="form-dob" disabled>
                   </div>
 				  <div class="form-group">
                     <label for="form-username">Contact</label>
@@ -147,16 +145,16 @@
         </div>
             </div>
             <!-- /.row -->
-			</div>
+			
           <!-- ./box-body -->
           <!-- /.box-footer -->
-			</div>
+			
         <!-- /.box -->
-		</div>
+		
       <!-- /.col -->
-	  </div>
+	  
     <!-- /.row -->
-	</div>
+	
 </div>
 <?php
 include'footer.php';
