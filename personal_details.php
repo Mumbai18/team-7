@@ -90,7 +90,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <div class="row">
+            <div class="row" style="min-height: 669px;background-image:url('images/backgrounds/1.jpg');padding-bottom:2%;background-repeat: no-repeat;background-size: cover;">
               <!---ADD your Code here-->
 				<div class="col-sm-5">
           <div class="form-box">
