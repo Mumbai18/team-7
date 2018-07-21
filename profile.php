@@ -1,7 +1,8 @@
 <?php
   include'all.php';
 ?>
-
+<script src="assets/js/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.bundle.min.js"></script>
 <style>
   .bg-title{
     background: rgba(60,141,188,1);
@@ -194,6 +195,7 @@
                   <span style="font-size:16px;"><b>Sibling(If any):</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
                   <span style="font-size:16px;"><b>Educational Institute</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
                   <span style="font-size:16px;"><b>Current Education</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
+                  <!-- <span style="font-size:16px;"><b>Course to Pursue:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Cousrse to pursue"]?></span><br> -->
                   <span style="font-size:16px;"><b>Previous year's result:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["result"]?></span><br>
                   <span style="font-size:16px;"><b>Amount Required:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["amountneed"];?></span><br><br><br>
 
@@ -212,7 +214,17 @@
 
                   </div>
                 </div>
+
+
+              <div class="pm col-md-12" style="overflow: hidden; display:flex;justify-content:center; ">
+                  <!-- <iframe id="myFrame" src="/line.html?id=1" style="height:380px;width:100%"></iframe> -->
+                  <object data="line.html" width="600" height="500" style="zoom:0.75; display:flex;justify-content:center; overflow: hidden;">
+                  <embed src="line.html?id=1" style="display:flex;justify-content:center; overflow: hidden;"> </embed>
+                  Error: Embedded data could not be displayed.
+              </object>
               </div>
+            </div>
+
 
 
 
