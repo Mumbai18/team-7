@@ -89,7 +89,7 @@
             <h2 class="box-title" style="font-size:22px;color:white;">Student Details</h2>
           </div>
           <!-- /.box-header -->
-          <div class="box-body" style="padding:10px">
+          <div class="box-body" style="padding:16px">
             <div class="row" style="min-height: 669px;background-image:url('images/backgrounds/1.jpg');padding-bottom:2%;background-repeat: no-repeat;background-size: cover;">
               <!---ADD your Code here-->
 				<div class="col-sm-5">
@@ -103,42 +103,42 @@
               </div>
             </div>
             <div class="form-bottom">
-              <form role="form" action="login_reg_scripts/logincode.php" method="post" class="login-form">
+              <form role="form" action="login_reg_scripts/apply1.php" method="post" class="login-form">
                 <div class="form-group">
                     <label for="form-username">Name</label>
-                    <input type="text" name="name" placeholder="Name" class="form-username form-control" id="form-name" disabled>
+                    <input type="text" name="name" value="<?php echo $firstname." ".$surname;?>" placeholder="Name" class="form-username form-control" id="form-name" disabled>
                   </div>
                   <div class="form-group">
                     <label for="form-username">Aadhar Card No</label>
-                    <input type="text" name="aadhar" placeholder="Aadhar Card No" class="form-username form-control" id="form-aadhar" disabled>
+                    <input type="text" name="aadhar" value="<?php echo $firstname." ".$surname;?>" placeholder="Aadhar Card No" class="form-username form-control" id="form-aadhar" disabled>
                   </div>
 				  <div class="form-group">
                     <label  for="form-username">Email</label>
-                    <input type="text" name="email" placeholder="Email" class="form-username form-control" id="form-email" disabled>
+                    <input type="text" name="email" value="<?php echo $email;?>" placeholder="Email" class="form-username form-control" id="form-email" disabled>
                   </div>
 				  <div class="form-group">
                     <label  for="form-username">Mother's Name</label>
-                    <input type="text" name="mothername" placeholder="Mother's Name" class="form-username form-control" id="form-mothername" disabled>
+                    <input type="text" name="mothername" placeholder="Mother's Name" class="form-username form-control" id="form-mothername" >
                   </div>
 				  <div class="form-group">
                     <label for="form-username">Father's Name</label>
-                    <input type="text" name="fathername" placeholder="Father's Name" class="form-username form-control" id="form-fathername" disabled>
+                    <input type="text" name="fathername" placeholder="Father's Name" class="form-username form-control" id="form-fathername">
                   </div>
 				  <div class="form-group">
                     <label for="form-username">Father's/Mother's Email</label>
-                    <input type="text" name="email2" placeholder="Father's/Mother's Email" class="form-password form-control" id="form-email2" disabled>
+                    <input type="text" name="email2" placeholder="Father's/Mother's Email" class="form-password form-control" id="form-email2" >
                   </div>
 				  <div class="form-group">
                     <label for="form-username">DOB</label>
-                    <input type="text" name="dob" placeholder="DOB" class="form-username form-control" id="form-dob" disabled>
+                    <input type="text" name="dob" value="<?php echo $dob;?>" placeholder="DOB" class="form-username form-control" id="form-dob" >
                   </div>
 				  <div class="form-group">
                     <label for="form-username">Contact</label>
-                    <input type="text" name="contact" placeholder="Contact" class="form-username form-control" id="form-contact" disabled>
+                    <input type="text" name="contact" placeholder="Contact" class="form-username form-control" id="form-contact">
                   </div>
 				  <div class="form-group">
                     <label for="form-username">Loan Amount</label>
-                    <input type="number" name="loan" placeholder="Loan Amount" class="form-username form-control" id="form-loan">
+                    <input type="text" name="loan" placeholder="Loan Amount" class="form-username form-control" id="form-loan">
                   </div>
                   <button type="submit" class="btn">Submit</button>
               </form>
@@ -162,5 +162,3 @@
 include'footer.php';
 
 ?>
-
-	

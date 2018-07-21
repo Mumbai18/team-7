@@ -9,6 +9,8 @@
     $surname=$rows["surname"];
     $email=$rows["email"];
     $user_type=$rows['type'];
+    $aadhar=$rows["aadharno"];
+    $dob=$rows["dob"];
   }
 
 ?>
