@@ -25,6 +25,8 @@
 		    }
 		  };
 		  xhttp.open("post", "get_chart_data.php", true);
+		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		  xhttp.send("id=1");
 		  xhttp.send();
 
 		 // $.post("get_chart_data.php",
