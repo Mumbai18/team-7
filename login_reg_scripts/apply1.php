@@ -39,32 +39,18 @@ else
 			$loan=$_POST['loan'];
 			$contact=$_POST['contact'];
 			$pemail=$_POST['email2'];
-			if($utype=='1')
-			{
 
-			}
-			else if($utype=='2')
-			{
-
-			}
-			else if($utype=='3')
-			{
-
-			}
-			else
-			{
-			}
 			date_default_timezone_set("Asia/Kolkata");
 			$time1= time();
 			$date1= date( 'y-m-d h:i:s', $time1);
 			if(!empty($fname) && !empty($mname) && !empty($loan) && !empty($contact) && !empty($pemail))
 			{
-						$query="EDIT login SET fname='".$fname."', mname='".$fname."',contact='".$mname."',";
+						$query="UPDATE login SET fname='".$fname."', mname='".$mname."',contact='".$contact."',amountneed='".$loan."',pemail='".$pemail."'";
 						if($query_run=mysqli_query($con,$query))
 						{
 
 							echo '<script type="text/javascript">';
-							echo 'window.location.href="../login.php?redirect=reg"';
+							echo 'window.location.href="../acadd.php?redirect=reg"';
 							echo '</script>';
 							echo '<div id="register"><center><b style="color:red;">You Have Registered</b></center></div><br>';
 						}
