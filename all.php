@@ -304,15 +304,26 @@ require 'assets/backend/data.php';
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
       <li class="header">What we have</li>
+        <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==1){ ?>
         <li><a href="profile.php"><i class="fa fa-user"></i> <span>Your Profile</span></a></li>
         <li><a href="#"><i class="fa fa-calendar-o"></i> <span>Check Application Status</span></a></li>
-        <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==2){ ?>
-          <li><a href="#"><i class="fa fa-calendar"></i> <span>Review Application</span></a></li>
+        <li><a href="personal_details.php"><i class="fa fa-shopping-cart"></i> <span>Apply for Application</span></a></li>
         <?php
         }
           }
         ?>
-        <li><a href="personal_details.php"><i class="fa fa-shopping-cart"></i> <span>Apply for Application</span></a></li>
+        <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==2){ ?>
+          <li><a href="#"><i class="fa fa-calendar"></i> <span>Review Application</span></a></li>
+          <?php
+          }
+            }
+          ?>
+        <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==3){ ?>
+            <li><a href="donor.php"><i class="fa fa-calendar"></i> <span>Your Profile</span></a></li>
+            <?php
+            }
+              }
+        ?>
         <li class="header">About Us</li>
         <li><a href=""><i class="fa fa-phone"></i> <span>Contact Us</span></a></li>
         <li><a href="">&nbsp<i class="fa fa-info "></i> <span>About IM</span></a></li>
@@ -358,5 +369,5 @@ require 'assets/backend/data.php';
 <<<<<<< HEAD
 =======
 
-      
+
 >>>>>>> 9f1a51d6df27ea42be39c142a3f1a16f332c0fe3
