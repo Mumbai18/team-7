@@ -1,6 +1,6 @@
 <?php
 $con=mysqli_connect('localhost','root','');
-$database=@mysqli_select_db($con,'medical');
+$database=@mysqli_select_db($con,'educon');
 if($con && $database)
 {
 }
