@@ -43,6 +43,10 @@ else
 		isset($_POST['password2']) &&
 		isset($_POST['email1']) &&
 		isset($_POST['gender1']) &&
+		isset($_POST['aadhar']) &&
+		isset($_POST['income']) &&
+		isset($_POST['result']) &&
+		isset($_POST['gender1']) &&
 		isset($_POST['dob1']) &&
 		isset($_POST['month1']) &&
 		isset($_POST['year1'])
@@ -57,26 +61,22 @@ else
 			$date=$_POST['dob1'];
 			$month=$_POST['month1'];
 			$year=$_POST['year1'];
+			$aadhar=$_POST['aadhar'];
+			$result=$_POST['result'];
+			$income=$_POST['income'];
 			$dob=$_POST['year1'].'-'.$_POST['month1'].'-'.$_POST['dob1'];
-			$disease="NA";
-			$special="NA";
-			$spreadsheet="NA";
-			$regno="NA";
 			$utype=$_POST['type'];
-			$lati=$_POST['lati'];
-			$longi=$_POST['longi'];
 			if($utype=='1')
 			{
-				$disease=$_POST['disease'];
+
 			}
 			else if($utype=='2')
 			{
-				$special=$_POST['special'];
-				$regno=$_POST['regno'];
+
 			}
 			else if($utype=='3')
 			{
-            	$spreadsheet=$_POST['spreadsheet'];
+
 			}
 			else
 			{
@@ -85,7 +85,7 @@ else
 			date_default_timezone_set("Asia/Kolkata");
 			$time1= time();
 			$date1= date( 'y-m-d h:i:s', $time1);
-			if(!empty($firstname) && !empty($lastname) && !empty($password) && !empty($email) && !empty($gender) && !empty($dob) && !empty($month) && !empty($year)  && !empty($password1)/*&& !empty($response)*/)
+			if(!empty($firstname) && !empty($lastname) && !empty($password) && !empty($email) && !empty($gender) && !empty($dob) && !empty($month) && !empty($year)  && !empty($password1) && !empty($aadhar) && !empty($income)  && !empty($result)/*&& !empty($response)*/)
 			{
 
 				if($password==$password1)
@@ -100,7 +100,7 @@ else
 					else
 					{
 
-						$query="INSERT INTO login VALUES('','".mysqli_real_escape_string($con,$password)."','".mysqli_real_escape_string($con,$firstname)."','".mysqli_real_escape_string($con,$lastname)."','".mysqli_real_escape_string($con,$email)."','".mysqli_real_escape_string($con,$gender)."','".mysqli_real_escape_string($con,$dob)."','".mysqli_real_escape_string($con,$date1)."','','','','','.$ip.','".mysqli_real_escape_string($con,$date1)."','".mysqli_real_escape_string($con,$disease)."','".$utype."','".$special."','".$spreadsheet."','".$lati."','".$longi."','".$regno."')";
+						$query="INSERT INTO login VALUES('','".mysqli_real_escape_string($con,$password)."','".mysqli_real_escape_string($con,$firstname)."','".mysqli_real_escape_string($con,$lastname)."','".mysqli_real_escape_string($con,$email)."','".mysqli_real_escape_string($con,$gender)."','".mysqli_real_escape_string($con,$dob)."','".mysqli_real_escape_string($con,$date1)."','','','','".mysqli_real_escape_string($con,$aadhar)."','','','".mysqli_real_escape_string($con,$result)."','".mysqli_real_escape_string($con,$income)."','','','','','','','.$ip.','1','')";
 						if($query_run=mysqli_query($con,$query))
 						{
 

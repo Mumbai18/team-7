@@ -124,8 +124,8 @@
               </div>
             </div>
             <div class="form-bottom" style="display:<?php if(($_GET['redirect'])=='reg'){echo'none';}?>;">
-                  <a href="patreg.php"><button style="width:100%;margin-bottom: 14px;"  class="btn">Student Registration</button></a>
-                  <a href="docreg.php"><button style="width:100%;margin-bottom:14px"  class="btn">Donor Registration</button></a>
+                  <a href="reg.php"><button style="width:100%;margin-bottom: 14px;"  class="btn">Student Registration</button></a>
+                  <a href="donarreg.php"><button style="width:100%;margin-bottom:14px"  class="btn">Donor Registration</button></a>
             </div>
           </div>
 
