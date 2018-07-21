@@ -50,7 +50,7 @@ else
 						{
 
 							echo '<script type="text/javascript">';
-							echo 'window.location.href="../acadd.php?redirect=reg"';
+							echo 'window.location.href="../Acadd.php?redirect=reg"';
 							echo '</script>';
 							echo '<div id="register"><center><b style="color:red;">You Have Registered</b></center></div><br>';
 						}

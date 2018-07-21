@@ -239,8 +239,7 @@
             }
              else
              {
-                 //echo '<b style="color:red;">&nbsp Please Select File</b>';
-             }
+ }
       ?>
     <div class="row" style="background-color:#ecf0f5;height:5px;">
 
@@ -320,6 +319,7 @@
                   <div class="form-group">
                         <label for="exampleInputFile"></label>
                         <input id="exampleInputFile" name="file2" type="file">
+						<p class="help-block">Upload your file here.</p>
                   </div>
               </div>
 
