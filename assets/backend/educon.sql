@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jul 21, 2018 at 03:29 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Host: 127.0.0.1
+-- Generation Time: Jul 21, 2018 at 09:30 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `educon`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `application`
+--
+
+CREATE TABLE `application` (
+  `aid` int(20) NOT NULL,
+  `id` int(20) NOT NULL,
+  `Status` varchar(20) NOT NULL,
+  `institute` varchar(50) NOT NULL,
+  `typeedu` varchar(50) NOT NULL,
+  `result` float NOT NULL,
+  `income` float NOT NULL,
+  `year` int(11) NOT NULL,
+  `occupation` varchar(50) NOT NULL,
+  `did` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `application`
+--
+
+INSERT INTO `application` (`aid`, `id`, `Status`, `institute`, `typeedu`, `result`, `income`, `year`, `occupation`, `did`) VALUES
+(1, 1, '1', 'Ruia', '12th', 89, 10000, 2014, 'Farmer', 1),
+(3, 1, '1', 'Ruia', '11th', 80, 12000, 2013, 'Farmer', 2);
 
 -- --------------------------------------------------------
 
@@ -679,7 +706,7 @@ CREATE TABLE `online` (
 --
 
 INSERT INTO `online` (`id`, `firstname`, `surname`, `time`) VALUES
-(1, 'Admin', 'Guy', '2018-07-21 18:54:30');
+(1, 'Admin', 'Guy', '2018-07-21 20:58:32');
 
 -- --------------------------------------------------------
 
@@ -753,6 +780,14 @@ INSERT INTO `store_answer` (`question_id`, `a_id`, `a_name`, `a_email`, `a_answe
 --
 
 --
+-- Indexes for table `application`
+--
+ALTER TABLE `application`
+  ADD PRIMARY KEY (`aid`),
+  ADD UNIQUE KEY `id` (`aid`),
+  ADD UNIQUE KEY `Did` (`aid`);
+
+--
 -- Indexes for table `forum_answer`
 --
 ALTER TABLE `forum_answer`
@@ -787,6 +822,11 @@ ALTER TABLE `store`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `application`
+--
+ALTER TABLE `application`
+  MODIFY `aid` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `forum_question`
 --

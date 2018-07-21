@@ -11,6 +11,7 @@
     $user_type=$rows['type'];
     $aadhar=$rows["aadharno"];
     $dob=$rows["dob"];
+      $income=$rows["income"];
   }
 
 ?>

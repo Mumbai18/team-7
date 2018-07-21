@@ -290,7 +290,7 @@ require 'assets/backend/data.php';
       }
       ?>
       <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
+      <form action="Acadd.php" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="names" list="namelist" id="names" class="form-control" placeholder="Search..." onkeyup="searchnames();" oninput="linking();">
           <datalist id="namelist"></datalist>
@@ -308,11 +308,11 @@ require 'assets/backend/data.php';
         <li><a href="#"><i class="fa fa-calendar-o"></i> <span>Check Application Status</span></a></li>
         <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==2){ ?>
           <li><a href="#"><i class="fa fa-calendar"></i> <span>Review Application</span></a></li>
-        <?
+        <?php
         }
           }
         ?>
-        <li><a href="#"><i class="fa fa-shopping-cart"></i> <span>Apply for Application</span></a></li>
+        <li><a href="personal_details.php"><i class="fa fa-shopping-cart"></i> <span>Apply for Application</span></a></li>
         <li class="header">About Us</li>
         <li><a href=""><i class="fa fa-phone"></i> <span>Contact Us</span></a></li>
         <li><a href="">&nbsp<i class="fa fa-info "></i> <span>About IM</span></a></li>
@@ -355,3 +355,8 @@ require 'assets/backend/data.php';
           }
         }
     </script>
+<<<<<<< HEAD
+=======
+
+      
+>>>>>>> 9f1a51d6df27ea42be39c142a3f1a16f332c0fe3
