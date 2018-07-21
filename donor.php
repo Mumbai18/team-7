@@ -72,7 +72,7 @@
 
 <!-- Content Wrapper. Contains page content -->
 <?php
-  if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']))
+  if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']) && $user_type==3)
   {
     if(isset($_GET["id"]) && !empty($_GET["id"]))
     {
@@ -159,42 +159,67 @@
                   <span style="font-size:16px;"><b>Gender:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
                   <span style="font-size:16px;"><b>Birth Date:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
                   <span style="font-size:16px;"><b>Date of joining:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
+                 
+
+
                 </div>
-              </div>
+
                             <!-- /.col -->
-              <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Memoronda</b></h3>
-              <div class="pm col-md-12" style="display:flex;justify-content:center;">
-                <div class="pmi profile-info" >
-                  <span style="font-size:16px;"><b>Aadhar card:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["aadharno"];?></span><br>
-                  <span style="font-size:16px;"><b>Father's Name:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["fname"];?></span><br>
-                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
-                  <span style="font-size:16px;"><b>Mother's Name:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["mname"];?></span><br>
-                  <span style="font-size:16px;"><b>occupation:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["occupation"];?></span><br>
-                  <span style="font-size:16px;"><b>Sibling(If any):</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
-                  <span style="font-size:16px;"><b>Educational Institute</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
-                  <span style="font-size:16px;"><b>Current Education</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
-                  <span style="font-size:16px;"><b>Course to Pursue:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Cousrse to pursue"]?></span><br>
-                  <span style="font-size:16px;"><b>Previous year's result:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["result"]?></span><br>
-                  <span style="font-size:16px;"><b>Amount Required:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
-
-
+              
                   
-                     <div class="btn-group">
-  
-                  <button type="button" class="btn btn-primary" id="adhar">Aadhar Card</button>
-
-                  <button type="button" class="btn btn-primary" id="income">Income Certificate</button>
-                
-                  <button type="button" class="btn btn-primary" id="ration">Ration Card</button>
-                  <button type="button" class="btn btn-primary" id="academic">Academic proof</button>
-                        
-                      
-                  
-                  </div>
+                     
                 </div>
               </div>
               
 
+        <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>PREVIOUS CONTRIBUTIONS</b></h4><br>
+     <?php
+        $query1="SELECT * FROM login,application WHERE login.id= application.id and application.did='".$user_id."'";
+      $query_run1=mysqli_query($con,$query1);
+      ?>
+              
+           
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <table class="table table-condensed">
+                <tbody><tr>
+                  <th style="width: 10px">#</th>
+                  <th><b>SR NO.</b></th>
+                  <th><b>NAME</b></th>
+                  <th style="width: 40px"><b>PROGRESS</b></th>
+                </tr>
+    
+<?php   
+    $i=1;  
+      while($row1=mysqli_fetch_assoc($query_run1))
+      {
+        ?>
+      
+                  <tr>
+                  <td><?php echo $i;?></td>
+                  <td><?php echo $row1["firstname"].'<br>'?></td>
+                  <td><?php echo $row1["surname"].'<br>'?></td>
+                  <td>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-red">55%</span></td>
+       
+                </tr>
+                <?php
+                $i++;
+      }
+?>
+                
+              </tbody></table>
+            </div>
+            <!-- /.box-body -->
+          </div>      
+
+      
+
+              </div>
             
           <!-- /.box-footer -->
         </div>
@@ -235,62 +260,7 @@ btn.addEventListener('click', function() {
       if($rowus['type']==3)
       {
     ?>
-  <div class="row">
-
-      <div class="col-md-7 col-md-offset-1 forum">
-        <!-- Info Boxes Style 2 -->
-
-        <!-- PRODUCT LIST -->
-        <div class="box box-primary" style="border-top-color:#d2d6de;">
-          <div class="box-header with-border bg-title" style="">
-            <h3 class="box-title" style="color:white;">Medicines by  <?php echo $rows["firstname"].' '.$rows["surname"];?></h3>
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body">
-            <ul class="products-list product-list-in-box">
-              <?php
-              $content= file_get_contents("http://127.0.0.1/ss/quickstart.php");
-              $content1=explode("/",$content);
-              foreach($content1 as $temp)
-              {
-                $content2=explode(",",$temp);
-                if(@$content2[3]==$user_id)
-                {
-                    $query="SELECT * FROM login WHERE id='".$content2[3]."'";
-                    $query_run=mysqli_query($con,$query);
-                    $mrow=mysqli_fetch_assoc($query_run);
-                ?>
-                <li class="item">
-                  <div>
-                    <div class="product-img">
-                      <img src="Tablet.png" style="width:75px;height:75px;" alt="Product Image">
-                    </div>
-                    <div class="product-info" style="margin-left:90px;">
-                      <a href="" class="product-title" style="font-size:16px;"><?php echo $content2[0]; ?>
-                        <span class="label pull-right " style="color:#999999;"><?php echo 'Available'; ?></span>
-                      </a>
-                      <span class="product-description">
-                        <?php echo 'Seller: Ch. '.$mrow['firstname'].' '.$mrow['surname']; ?>
-                      </span>
-                    </div>
-                  </div>
-                  <br><br><span style="margin-left:10px;margin-top:3px;font-size:16px;" class="label label-success pull-left"><?php echo $content2[1];?> Pcs</span>&nbsp
-                    <span style="margin-left:10px;margin-top:3px;font-size:16px;margin-left:5px" class="label label-danger pull-left"><?php echo $content2[2];?> Rs</span>
-                </li>
-                <?php
-              }
-            }
-              ?>
-              <!-- /.item -->
-            </ul>
-          </div>
-          <!-- /.box-body -->
-
-          <!-- /.box-footer -->
-        </div>
-        <!-- /.box -->
-      </div>
-  </div>
+ 
   <?php
 }
   ?>
