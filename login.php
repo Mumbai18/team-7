@@ -48,7 +48,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="modal fade bd-example-modal-lg error2" id="error2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg1">
             <div class="modal-content" style="width:100%:">
@@ -64,7 +64,7 @@
             </div>
           </div>
         </div>
-        
+
         <?php
           if(!isset($_SESSION['user_id']) && empty($_SESSION['user_id']))
           {
@@ -103,7 +103,7 @@
           <div class="form-box" >
             <div class="form-top">
               <div class="form-top-left">
-                <?php 
+                <?php
                   if(isset($_GET['redirect']))
                   {
                     if($_GET['redirect']=='reg')
@@ -124,10 +124,8 @@
               </div>
             </div>
             <div class="form-bottom" style="display:<?php if(($_GET['redirect'])=='reg'){echo'none';}?>;">
-                  <a href="patreg.php"><button style="width:100%;margin-bottom: 14px;"  class="btn">Patient Registration</button></a>
-                  <a href="docreg.php"><button style="width:100%;margin-bottom:14px"  class="btn">Doctor Registration</button></a>
-                  <a href="chemreg.php"><button style="width:100%;margin-bottom:14px"  class="btn">Chemist Registration</button></a>
-                  <a href="medereg.php"><button style="width:100%;"  class="btn">Med Equip Registration</button></a>  
+                  <a href="patreg.php"><button style="width:100%;margin-bottom: 14px;"  class="btn">Student Registration</button></a>
+                  <a href="docreg.php"><button style="width:100%;margin-bottom:14px"  class="btn">Donor Registration</button></a>
             </div>
           </div>
 

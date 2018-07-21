@@ -75,7 +75,7 @@
       <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
         <div class="box boxzol" style="">
           <div class="box-header with-border bg-title2" style="">
-            <h2 class="box-title" style="font-size:22px;color:white;">Admin Guy's Profile</h2>
+            <h2 class="box-title" style="font-size:22px;color:white;">Your Table Name</h2>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
