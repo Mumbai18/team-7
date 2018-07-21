@@ -33,20 +33,21 @@
                 function display(data)
                 {
                     // console.log(data);
-                    var data_json = JSON.parse(data);
-                     var year = [];
+                    var data_json = JSON.parse(JSON.stringify(data));
+                    var year = [];
                     var income = [];
                     var result = [];
                     console.log(data_json);
-                    
+
 
 
                     for (var i in data_json) {
+                    	console.log(data_json[i].year);
                         year.push(parseFloat(data_json[i].year));
                         income.push(parseFloat(data_json[i].income));
                         result.push(parseFloat(data_json[i].result));
                     }
-                    console.log("year = " + playerid[0]);
+                    console.log("year = " + year[0]);
 
                     var chartdata = {
                         labels: year,
