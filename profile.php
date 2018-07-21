@@ -82,48 +82,15 @@
       $rows=mysqli_fetch_assoc($query_run);
     }
 ?>
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg1">
-      <div class="modal-content" style="width:100%:">
-        <div class="modal-header">
-          <h3 class="modal-title" >People following <?php echo $rows["firstname"].' '.$rows["surname"];?></h3>
-        </div>
-        <div class="modal-body xsfonts" style="" id="folist"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" style="font-size:15px;" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg1">
-      <div class="modal-content" style="width:100%:">
-        <div class="modal-header">
-          <h3 class="modal-title" >Poeple Followed by <?php echo $rows["firstname"].' '.$rows["surname"];?>'s </h3>
-        </div>
-        <div class="modal-body xsfonts" style="" id="folist2"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" style="font-size:15px;" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
-
-
-
-  <div class="content-wrapper">
-    <div class="row" style="background-color:#ecf0f5;height:5px;"></div>
+  <div class="content-wrapper" style="background-image:url('images/backgrounds/1.jpg');padding-bottom:2%;background-repeat: no-repeat;background-size: cover;">
+    <div class="row" style="margin:0 3%;"></div>
     <div class="row topinfo">
-      <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
-        <div class="box boxzol" style="">
-          <div class="box-header with-border bg-title2" style="">
+      <div class="col-md-12">
             <h2 class="box-title" style="font-size:22px;color:white;"><?php echo $rows["firstname"].' '.$rows["surname"];?>'s Profile</h2>
-          </div>
           <!-- /.box-header -->
-          <div class="box-body">
-              <!-- /.col -->
-              <div class="col-md-6 pro-box" style="">
+		     <div class="col-md-6 pro-box" style="">
                 <h3 class="text-center" style="font-size:20px;margin-top:10px"><b><?php echo $rows["firstname"].' '.$rows["surname"];?></b></h3>
                 <div class="profile-picture text-center">
                   <img src="images/users/<?php
@@ -169,36 +136,41 @@
                   ?>
                 </div>
               </div>
+          
               <!-- /.col -->
-              <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Memoronda</b></h3>
-              <div class="pm col-md-5" style="display:flex;justify-content:center;">
-                <div class="pmi profile-info" >
+              <!-- /.col -->
+			  <div class="col-md-12">
+              <div class="pm col-md-5" style="display:flex;">
+                <div class="pmi profile-info" style="text-color:white">
                   <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>Personal Memoronda</b></h4><br>
-                  <span style="font-size:16px;"><b>Name:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
-                  <span style="font-size:16px;"><b>Email ID:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
+                  <span style="font-size:16px;"><b>Name:</b></span><span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
+                  <span style="font-size:16px;"><b>Email ID:</b></span><span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
                   <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
-                  <span style="font-size:16px;"><b>Gender:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
-                  <span style="font-size:16px;"><b>Birth Date:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
-                  <span style="font-size:16px;"><b>Date of joining:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
+                  <span style="font-size:16px;"><b>Gender:</b></span><span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
+                  <span style="font-size:16px;"><b>Birth Date:</b></span><span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
+                  <span style="font-size:16px;"><b>Date of joining:</b></span><span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
                 </div>
               </div>
+			
                             <!-- /.col -->
-              <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Memoronda</b></h3>
-              <div class="pm col-md-12" style="display:flex;justify-content:center;">
+              <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Details</b></h3>
+              <div class="pm col-md-12" style="display:flex; padding-left:10%">
                 <div class="pmi profile-info" >
-                  <span style="font-size:16px;"><b>Aadhar card:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["aadharno"];?></span><br>
-                  <span style="font-size:16px;"><b>Father's Name:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["fname"];?></span><br>
-                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
-                  <span style="font-size:16px;"><b>Mother's Name:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["mname"];?></span><br>
-                  <span style="font-size:16px;"><b>occupation:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["occupation"];?></span><br>
-                  <span style="font-size:16px;"><b>Sibling(If any):</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
-                  <span style="font-size:16px;"><b>Educational Institute</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
-                  <span style="font-size:16px;"><b>Current Education</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
-                  <span style="font-size:16px;"><b>Course to Pursue:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Cousrse to pursue"]?></span><br>
-                  <span style="font-size:16px;"><b>Previous year's result:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["result"]?></span><br>
-                  <span style="font-size:16px;"><b>Amount Required:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
+                  <span style="font-size:16px;"><b>Aadhar card:</b></span><span style="font-size:16px;"><?php echo $rows["aadharno"];?></span><br>
+                  <span style="font-size:16px;"><b>Father's Name:</b></span><span style="font-size:16px;"><?php echo $rows["fname"];?></span><br>
+                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span><span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
+                  <span style="font-size:16px;"><b>Mother's Name:</b></span><span style="font-size:16px;"><?php echo $rows["mname"];?></span><br>
+                  <span style="font-size:16px;"><b>occupation:</b></span><span style="font-size:16px;"><?php echo $rows["occupation"];?></span><br>
+                  <span style="font-size:16px;"><b>Sibling(If any):</b></span><span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
+                  <span style="font-size:16px;"><b>Educational Institute</b></span><span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
+                  <span style="font-size:16px;"><b>Current Education</b></span><span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
+                  <span style="font-size:16px;"><b>Course to Pursue:</b></span><span style="font-size:16px;"><?php echo $rows["Cousrse to pursue"];?></span><br>
+                  <span style="font-size:16px;"><b>Previous year's result:</b></span><span style="font-size:16px;"><?php echo $rows["result"];?></span><br>
+                  <span style="font-size:16px;"><b>Amount Required:</b></span><span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
 
-
+				</div>
+				</div>
+				</div>
                   
                      <div class="btn-group">
   
@@ -218,9 +190,9 @@
 
             
           <!-- /.box-footer -->
-        </div>
+        
         <!-- /.box -->
-      </div>
+      
       <!-- /.col -->
     </div>
     <!-- /.row -->
