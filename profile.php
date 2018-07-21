@@ -194,29 +194,28 @@
                   <span style="font-size:16px;"><b>Sibling(If any):</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
                   <span style="font-size:16px;"><b>Educational Institute</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
                   <span style="font-size:16px;"><b>Current Education</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
-                  <span style="font-size:16px;"><b>Course to Pursue:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Cousrse to pursue"]?></span><br>
                   <span style="font-size:16px;"><b>Previous year's result:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["result"]?></span><br>
-                  <span style="font-size:16px;"><b>Amount Required:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
+                  <span style="font-size:16px;"><b>Amount Required:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["amountneed"];?></span><br><br><br>
 
 
-                  
+
                      <div class="btn-group">
-  
+
                   <button type="button" class="btn btn-primary" id="adhar">Aadhar Card</button>
 
                   <button type="button" class="btn btn-primary" id="income">Income Certificate</button>
-                
+
                   <button type="button" class="btn btn-primary" id="ration">Ration Card</button>
                   <button type="button" class="btn btn-primary" id="academic">Academic proof</button>
-                        
-                      
-                  
+
+
+
                   </div>
                 </div>
               </div>
-              
 
-            
+
+
           <!-- /.box-footer -->
         </div>
         <!-- /.box -->
