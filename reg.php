@@ -39,20 +39,20 @@
             <div class="form-bottom" style="display:<?php if(($_GET['redirect'])=='reg'){echo'none';}?>;">
                 <form role="form" action="login_reg_scripts/proreg.php" method="post" class="registration-form">
                   <div class="form-group">
-                    <label class="sr-only" for="form-first-name">First name</label>
+                    <label class="sr-only" for="form-Institution name">Institution name</label>
                       <input type="text" name="firstname1" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
                   </div>
                   <div class="form-group">
-                    <label class="sr-only" for="form-last-name">Last name</label>
+                    <label class="sr-only" for="Previous  Education">Previous Education</label>
                       <input type="text" name="surname1" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
                   </div>
                   <div class="form-group">
-                    <label class="sr-only" for="form-email">Email</label>
+                    <label class="sr-only" for="form-email">Aiming to persue </label>
                     <input type="text" name="email1" placeholder="Email..." class="form-email form-control" id="form-email">
                   </div>
                   <div class="form-group">
-                    <label class="sr-only" for="form-email">Password</label>
-                    <input type="password" name="password1" placeholder="Password..." class="form-email form-control" id="form-email">
+                    <label class="sr-only" for="form-email">Id card</label>
+                    <input type="text" name="password1" placeholder="Password..." class="form-email form-control" id="form-email">
                   </div>
                   <div class="form-group">
                     <label class="sr-only" for="form-email">Confirm Password</label>

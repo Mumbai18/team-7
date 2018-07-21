@@ -70,7 +70,7 @@
           {
         ?>
 
-        <div class="col-sm-5">
+        <div class="col-sm-5" align="center">
           <div class="form-box">
             <div class="form-top">
               <div class="form-top-left">
