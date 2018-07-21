@@ -96,14 +96,14 @@
             {
               if(!empty($name))
           	{
-          	   $location="images/files/";
+          	   $location="img/Ration Card";
                if (file_exists($location.$user_id.'/'))
                {
 
                }
                else
                {
-               mkdir("images/files/".$user_id);
+               //mkdir("images/files/".$user_id);
           	   }
                if(($extension=='jpg' || $extension=='jpeg' || $extension=='png') && ($type=='image/jpeg' || $type=='image/png'))
                {
@@ -178,7 +178,7 @@
             <form class="form-horizontal" id="form1" name="form1" method="post" action="file_upload.php" enctype="multipart/form-data">
               <div class="box-body">
                   <div class="form-group">
-                        <label for="exampleInputFile">Upload Forum Photo</label>
+                        <label for="exampleInputFile">Upload Income Details</label>
                         <input id="exampleInputFile" name="file" type="file">
                         <p class="help-block">Upload your file here.</p>
                         <table class="table table-striped">
@@ -210,11 +210,7 @@
                                 </div>
                               </div>
                             </td>
-<<<<<<< HEAD
                             </tr>';
-=======
-							</tr>';
->>>>>>> 6b7c57549392848fd90c9fb705360cb495925710
                           }
 
                         ?>
@@ -228,7 +224,7 @@
                 <button type="submit" value="upload" class="btn btn-info pull-right">Submit</button>
               </div>
               <!-- /.box-footer -->
-            </form
+                  </form>
               </div>
             </div>
             <!-- /.box-body -->
@@ -237,9 +233,193 @@
           <!-- /.box -->
         </div>
         <!-- /.col -->
-      </div>
-      </div>
+        </div>
       <!-- /.row -->
+        
+        
+        
+        
+        
+        
+        
+        <div class="row" style="background-color:#ecf0f5;height:5px;">
+
+    </div>
+
+      <!-- Main row -->
+
+      <!-- /.row -->
+      <div class="row" style="margin:10px -7px; ">
+        <!-- Left col -->
+
+        <!-- /.col -->
+
+        <div class="col-md-7 col-md-offset-1 forum">
+          <!-- Info Boxes Style 2 -->
+
+          <!-- PRODUCT LIST -->
+          <div class="box box-primary" style="border-top-color:#d2d6de;">
+            <div class="box-header with-border bg-title" style="">
+              <h3 class="box-title" style="color:white;">Upload Photo</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div>
+            <form class="form-horizontal" id="form1" name="form1" method="post" action="file_upload.php" enctype="multipart/form-data">
+              <div class="box-body">
+                  <div class="form-group">
+                        <label for="exampleInputFile">Upload Bank Statement</label>
+                        <input id="exampleInputFile" name="file" type="file">
+                        <p class="help-block">Upload your file here.</p>
+                        <table class="table table-striped">
+                        <?php
+                        $directory = "images/files/";
+                          $images = glob($directory.$user_id."/*.*");
+                          foreach($images as $image){
+                            echo '
+                            <tr>
+                            <td>
+                              <img src="'.$image.'" height="100px" width="100px" role="button"   data-toggle="modal" data-target="#exampleModal"/><br><br>
+                              <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h3 class="modal-title">Your Report</h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p><img src="'.$image.'" height="100%" width="100%"/></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            </tr>';
+                          }
+
+                        ?>
+                        </table>
+                  </div>
+              </div>
+
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <a href="profile.php"><button type="button" class="btn btn-default">Skip this Step</button></a>
+                <button type="submit" value="upload" class="btn btn-info pull-right">Submit</button>
+              </div>
+              <!-- /.box-footer -->
+                  </form>
+              </div>
+            </div>
+            <!-- /.box-body -->
+
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        </div>
+        
+        
+        
+        
+        
+        
+         <div class="row" style="background-color:#ecf0f5;height:5px;">
+
+    </div>
+
+      <!-- Main row -->
+
+      <!-- /.row -->
+      <div class="row" style="margin:10px -7px; ">
+        <!-- Left col -->
+
+        <!-- /.col -->
+
+        <div class="col-md-7 col-md-offset-1 forum">
+          <!-- Info Boxes Style 2 -->
+
+          <!-- PRODUCT LIST -->
+          <div class="box box-primary" style="border-top-color:#d2d6de;">
+            <div class="box-header with-border bg-title" style="">
+              <h3 class="box-title" style="color:white;">Upload Photo</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div>
+            <form class="form-horizontal" id="form1" name="form1" method="post" action="file_upload.php" enctype="multipart/form-data">
+              <div class="box-body">
+                  <div class="form-group">
+                        <label for="exampleInputFile">Upload Ration Card Details</label>
+                        <input id="exampleInputFile" name="file" type="file">
+                        <p class="help-block">Upload your file here.</p>
+                        <table class="table table-striped">
+                        <?php
+                        $directory = "images/files/";
+                          $images = glob($directory.$user_id."/*.*");
+                          foreach($images as $image){
+                            echo '
+                            <tr>
+                            <td>
+                              <img src="'.$image.'" height="100px" width="100px" role="button"   data-toggle="modal" data-target="#exampleModal"/><br><br>
+                              <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h3 class="modal-title">Your Report</h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p><img src="'.$image.'" height="100%" width="100%"/></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            </tr>';
+                          }
+
+                        ?>
+                        </table>
+                  </div>
+              </div>
+
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <a href="profile.php"><button type="button" class="btn btn-default">Skip this Step</button></a>
+                <button type="submit" value="upload" class="btn btn-info pull-right">Submit</button>
+              </div>
+              <!-- /.box-footer -->
+                  </form>
+              </div>
+            </div>
+            <!-- /.box-body -->
+
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
       <?php
       }
       else {
