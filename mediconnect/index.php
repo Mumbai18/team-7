@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>MediConnect is HealthCare social networking website .</title>
+	<title>JSG.</title>
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -61,20 +61,9 @@ $(document).ready(function(){
 	<!-- header -->
 	<div class="header">
 		<div class="container-fluid">
-			<div class="header-grid">
-				<div class="header-grid-left">
-					<ul>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">mediconnect.com</a></li>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 890</li>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="#" class="login" data-toggle="modal" data-target="#myModal4">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="#" class="login reg"  data-toggle="modal" data-target="#myModal5">Register</a></li>
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="logo-nav">
+			<div class="logo-nav" >
 				<div class="logo-nav-left">
-					<h1><a href="index.php">MediConnect<span> Medical Network </span></a></h1>
+					<h1 style="padding:20px"><a href="index.php">Jain Social Group<span></span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -88,30 +77,21 @@ $(document).ready(function(){
 						</button>
 						</div>
 						<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-							<ul class="nav navbar-nav">
+							<ul class="nav navbar-nav" style="margin:10px">
 							
 								<li class="active"><a href="index.php">Home</a></li>
 								<li class="agileits dropdown">
-									<a href="#" data-toggle="dropdown" aria-expanded="true">about</a>
-									<ul class="dropdown-menu agile_short_dropdown">
-										<li><a href="about.php">about us</a></li>
-										<li><a href="app.php">Details</a></li>
-										<li><a href="testimonials.php">Reviews</a></li>
-									</ul>
+									<a href="index.php#" data-toggle="dropdown" aria-expanded="true">about</a>
 								</li>
 								</li>
 									<li class="agileits dropdown">
 									<a href="#" data-toggle="dropdown" aria-expanded="true">Features</a>
-									<ul class="dropdown-menu agile_short_dropdown">
-										<li><a href="blog.php">Blog</a></li>
-										<li><a href="appointment/ap.html">appointment</a></li>
-									</ul>
 								</li>
-								<li><a href="report.php">Report Issues</a></li>
+								
 									<li class="agileits dropdown">
 									<a href="#" data-toggle="dropdown" aria-expanded="true">Account</a>
 									<ul class="dropdown-menu agile_short_dropdown">
-										<li><a href="#" class="login" data-toggle="modal" data-target="#myModal4">login</a></li>
+										<li><a href="" class="login" data-toggle="modal" data-target="#myModal4">login</a></li>
 										<li><a href="#" class="login reg"  data-toggle="modal" data-target="#myModal5">register</a></li>
 									</ul>
 								</li>
@@ -137,62 +117,18 @@ $(document).ready(function(){
 	</div>
 	<!-- banner -->
 	<!-- banner -->
-	<div class="banner-silder">
-		<div id="JiSlider" class="jislider">
-			<ul>
-
-				<li>
-					<div class="w3layouts-banner-top">
+	<div class="banner-silder"/>
+		<div class="w3layouts-banner-top">
 
 						<div class="container">
 							<div class="agileits-banner-info">
 
-								<h3>Welcome to MediConnect</h3>
-								<p>connecting doctors and patients</p>
+								<h3>Welcome to Jain Social Group</h3>
+								<p>connecting donors and students</p>
 
 							</div>
 						</div>
 					</div>
-				</li>
-				<li>
-					<div class="w3layouts-banner-top w3layouts-banner-top1">
-						<div class="container">
-							<div class="agileits-banner-info">
-
-								<h3>Expert Doctors at fingertips</h3>
-								<p>Recommendation on next step.Multi-specialty.</p>
-
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="w3layouts-banner-top w3layouts-banner-top2">
-						<div class="container">
-							<div class="agileits-banner-info">
-		
-								<h3>Enjoy Free Appointments</h3>
-								<p>Free Treatment for Lucky People</p>
-							</div>
-
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="w3layouts-banner-top w3layouts-banner-top3">
-						<div class="container">
-							<div class="agileits-banner-info">
-								<h3>It's Free and Easy</h3>
-								<p>There’s no better place to get free expert answers .</p>
-
-							</div>
-
-						</div>
-					</div>
-				</li>
-
-			</ul>
-		</div>
 	</div>
 	<!-- //banner -->
 	<div class="container">
