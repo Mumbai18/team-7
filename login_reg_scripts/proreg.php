@@ -100,7 +100,7 @@ else
 					else
 					{
 
-						$query="INSERT INTO login VALUES('','".mysqli_real_escape_string($con,$password)."','".mysqli_real_escape_string($con,$firstname)."','".mysqli_real_escape_string($con,$lastname)."','".mysqli_real_escape_string($con,$email)."','".mysqli_real_escape_string($con,$gender)."','".mysqli_real_escape_string($con,$dob)."','".mysqli_real_escape_string($con,$date1)."','','','','".mysqli_real_escape_string($con,$aadhar)."','','','".mysqli_real_escape_string($con,$result)."','".mysqli_real_escape_string($con,$income)."','','','','','','','.$ip.','1','')";
+						$query="INSERT INTO login VALUES('','".mysqli_real_escape_string($con,$password)."','".mysqli_real_escape_string($con,$firstname)."','".mysqli_real_escape_string($con,$lastname)."','".mysqli_real_escape_string($con,$email)."','".mysqli_real_escape_string($con,$gender)."','".mysqli_real_escape_string($con,$dob)."','".mysqli_real_escape_string($con,$date1)."','','','','".mysqli_real_escape_string($con,$aadhar)."','','','".mysqli_real_escape_string($con,$result)."','".mysqli_real_escape_string($con,$income)."','','','','','','','.$ip.','1','','','')";
 						if($query_run=mysqli_query($con,$query))
 						{
 
