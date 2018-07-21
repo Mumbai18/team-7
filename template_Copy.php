@@ -1,6 +1,11 @@
 <?php
   include'all.php';
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="assets/js/Chart.js"></script>
+<script src="assets/js/Chart.min.js"></script>
+<script src="assets/js/jquery-1.11.2.min.js"></script>
+
 <style>
   .bg-title{
     background: rgba(60,141,188,1);
@@ -80,7 +85,23 @@
           <!-- /.box-header -->
           <div class="box-body">
             <div class="row">
-              <!---ADD your Code here>
+                    <div class="box box-info">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Line Chart</h3>
+
+                    <div class="box-tools pull-right">
+                      <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                  </div>
+                  <div class="box-body">
+                    <div class="chart">
+                      <canvas id="lineChart" style="height: 288px; width: 685px;" width="856" height="360"></canvas>
+                    </div>
+                  </div>
+            <!-- /.box-body -->
+          </div>
             </div>
             <!-- /.row -->
           </div>
@@ -94,7 +115,78 @@
     <!-- /.row -->
 </div>
 </div>
+
+
+
 <?php
 include'footer.php';
 
 ?>
+<script>
+
+        $(document).ready(function () {
+            showGraph();
+        });
+
+
+        function showGraph()
+        {
+            {
+                $.post("get_chart_data.php",
+                function (data)
+                {
+                    console.log(data);
+                     var playerid = [];
+                    var score = [];
+
+                    for (var i in data) {
+                        playerid.push(data[i].playerid);
+                        score.push(data[i].score);
+                    }
+
+                    var chartdata = {
+                        labels: playerid,
+                        datasets: [
+                            {
+                                label: 'Student Marks',
+                                backgroundColor: '#49e2ff',
+                                borderColor: '#46d5f1',
+                                hoverBackgroundColor: '#CCCCCC',
+                                hoverBorderColor: '#666666',
+                                data: score
+                            }
+                        ]
+                    };
+
+                    var graphTarget = $("#graphCanvas");
+
+                    var barGraph = new Chart(graphTarget, {
+                        type: 'bar',
+                        data: chartdata
+                    });
+                });
+            }
+
+            var ctx = document.getElementById('lineChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [{
+                        label: "My First dataset",
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 2, 20, 30, 45],
+                    }]
+                },
+
+    // Configuration options go here
+    options: {}
+});
+
+        }
+        </script>
+
