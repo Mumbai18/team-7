@@ -95,19 +95,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg1">
-      <div class="modal-content" style="width:100%:">
-        <div class="modal-header">
-          <h3 class="modal-title" >Poeple Followed by <?php echo $rows["firstname"].' '.$rows["surname"];?>'s </h3>
-        </div>
-        <div class="modal-body xsfonts" style="" id="folist2"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" style="font-size:15px;" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 
 
 
@@ -118,7 +106,7 @@
       <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
         <div class="box boxzol" style="">
           <div class="box-header with-border bg-title2" style="">
-            <h2 class="box-title" style="font-size:22px;color:white;"><?php echo $rows["firstname"].' '.$rows["surname"];?>'s Profile</h2>
+            <h2 class="box-title" style="font-size:22px;color:white;"><?php echo $rows["firstname"];?>'s Profile</h2>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -183,8 +171,7 @@
             <div class="box-body no-padding">
               <table class="table table-condensed">
                 <tbody><tr>
-                  <th style="width: 10px">#</th>
-                  <th><b>SR NO.</b></th>
+                  <th style="width: 10px"><b>SR NO.</b></th>
                   <th><b>NAME</b></th>
                   <th style="width: 40px"><b>PROGRESS</b></th>
                 </tr>
@@ -197,14 +184,13 @@
       
                   <tr>
                   <td><?php echo $i;?></td>
-                  <td><?php echo $row1["firstname"].'<br>'?></td>
-                  <td><?php echo $row1["surname"].'<br>'?></td>
+                  <td><?php echo $row1["firstname"].' '?><?php echo $row1["surname"].'<br>'?></td>
                   <td>
                     <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                      <div class="progress-bar progress-bar-success" style="width: 55%"></div>
                     </div>
                   </td>
-                  <td><span class="badge bg-red">55%</span></td>
+                  <td><span class="badge bg-green">55%</span></td>
        
                 </tr>
                 <?php
