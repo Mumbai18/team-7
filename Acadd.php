@@ -36,8 +36,8 @@
                 <i class="fa fa-pencil"></i>
               </div>
             </div>
-            <div class="form-bottom" style="display:<?php if(($_GET['redirect'])=='reg'){echo'none';}?>;">
-                <form role="form" action="login_reg_scripts/apply2.php" method="get" class="registration-form"  enctype="multipart/form-data">
+            <div class="form-bottom">
+                <form role="form" action="login_reg_scripts/apply2.php" method="post" class="registration-form"  enctype="multipart/form-data">
                   <div class="form-group">
                     <label style="color:white;" for="form-Institution name">Institution name</label>
                       <input type="text" name="iname" placeholder=" " class="form-first-name form-control" id="form-first-name">
@@ -56,11 +56,8 @@
                       <option value="Grad 5th year">Graduation 5th Year</option>
                     </select>
                   </div>
-                  <div class="form-group">
-                    <label style="color:white;" for="form-email">Id card</label>
-                    <input type="file" name="idcard" placeholder=" " id="form-email" style="height: 50px;">
-                  </div>
-                  <button type="submit" class="btn">Sign me up!</button>
+
+                  <button type="submit" class="btn">Submit!</button>
                 </form>
             </div>
           </div>

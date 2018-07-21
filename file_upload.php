@@ -141,7 +141,7 @@
             }
              else
              {
-                 echo '<b style="color:red;">&nbsp Please Select File</b>';
+                 //echo '<b style="color:red;">&nbsp Please Select File</b>';
              }
         $name=@$_FILES['file2']['name'];
           $tmp_name=@$_FILES['file2']['tmp_name'];
@@ -198,7 +198,7 @@
             }
              else
              {
-                 echo '<b style="color:red;">&nbsp Please Select File</b>';
+                 //echo '<b style="color:red;">&nbsp Please Select File</b>';
              }
             $name=@$_FILES['file3']['name'];
           $tmp_name=@$_FILES['file3']['tmp_name'];
@@ -255,8 +255,7 @@
             }
              else
              {
-                 
-             }
+ }
       ?>
     <div class="row" style="background-color:#ecf0f5;height:5px;">
 
@@ -302,13 +301,13 @@
         <!-- /.col -->
         </div>
       <!-- /.row -->
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         <div class="row" style="background-color:#ecf0f5;height:5px;">
 
     </div>
@@ -351,12 +350,12 @@
         </div>
         <!-- /.col -->
         </div>
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
          <div class="row" style="background-color:#ecf0f5;height:5px;">
 
     </div>
@@ -403,14 +402,14 @@
         </div>
         <!-- /.col -->
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
       <?php
       }
       else {

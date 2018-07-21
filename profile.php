@@ -1,7 +1,8 @@
 <?php
   include'all.php';
 ?>
-
+<script src="assets/js/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.bundle.min.js"></script>
 <style>
   .bg-title{
     background: rgba(60,141,188,1);
@@ -156,6 +157,7 @@
               <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Details</b></h3>
               <div class="pm col-md-12" style="display:flex; padding-left:10%; font-size: 15px; color:white">
                 <div class="pmi profile-info" >
+<<<<<<< HEAD
                   <span style="font-size:18px;"><b>Aadhar card: </b></span><span style="font-size:16px;"><?php echo $rows["aadharno"];?></span><br>
                   <span style="font-size:18px;"><b>Father's Name: </b></span><span style="font-size:16px;"><?php echo $rows["fname"];?></span><br>
                   <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span><span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
@@ -164,7 +166,7 @@
                   <span style="font-size:18px;"><b>Sibling(If any): </b></span><span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
                   <span style="font-size:18px;"><b>Educational Institute: </b></span><span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
                   <span style="font-size:18px;"><b>Current Education: </b></span><span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
-                  <span style="font-size:18px;"><b>Course to Pursue: </b></span><span style="font-size:16px;"><?php echo $rows["Course to pursue"];?></span>
+                  <span style="font-size:18px;"><b>Course to Pursue: </b></span><span style="font-size:16px;"><?php echo $rows["typeedu"];?></span>
                   <span style="font-size:18px;"><b>Previous year's result: </b></span><span style="font-size:16px;"><?php echo $rows["result"];?></span><br>
                   <span style="font-size:18px;"><b>Amount Required: </b></span><span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
 
@@ -172,23 +174,34 @@
 				</div>
 				</div>
                   
+
                      <div class="btn-group">
-  
+
                   <button type="button" class="btn btn-primary" id="adhar">Aadhar Card</button>
 
                   <button type="button" class="btn btn-primary" id="income">Income Certificate</button>
-                
+
                   <button type="button" class="btn btn-primary" id="ration">Ration Card</button>
                   <button type="button" class="btn btn-primary" id="academic">Academic proof</button>
-                        
-                      
-                  
+
+
+
                   </div>
                 </div>
-              </div>
-              
 
-            
+
+              <div class="pm col-md-12" style="overflow: hidden; display:flex;justify-content:center; ">
+                  <!-- <iframe id="myFrame" src="/line.html?id=1" style="height:380px;width:100%"></iframe> -->
+                  <object data="line.html" width="600" height="500" style="zoom:0.75; display:flex;justify-content:center; overflow: hidden;">
+                  <embed src="line.html?id=1" style="display:flex;justify-content:center; overflow: hidden;"> </embed>
+                  Error: Embedded data could not be displayed.
+              </object>
+              </div>
+            </div>
+
+
+
+
           <!-- /.box-footer -->
         
         <!-- /.box -->
