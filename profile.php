@@ -109,28 +109,7 @@
                   {
                   ?>
                     <br>
-                    <button style="padding:;background:green;color:white;;margin-top:10px;" id="button<?php echo $user_id;?>" onclick="followinc(this.id);">
-                      <?php
-                      $u_id=$_GET['id'];
-                      $queryf="SELECT * FROM login WHERE id='$u_id'";
-                      $queryf_run=mysqli_query($con,$queryf);
-                      $queryf_array=mysqli_fetch_assoc($queryf_run);
-                      $follow=$queryf_array['follow'];
-                      $x= explode(',',$follow);
-                      $flag=0;
-                      foreach($x as $x_a)
-                      {
-                        if($x_a==$_SESSION['user_id']){
-                          echo 'Following';
-                          $flag=1;
-                          break;
-                        }
-                      }
-                      if($flag==0)
-                      {
-                        echo 'Follow';
-                      }
-                      ?>
+                    
                     </button>
                     <?php
                   }
