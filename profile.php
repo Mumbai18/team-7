@@ -179,23 +179,44 @@
                   <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
                   <span style="font-size:16px;"><b>Gender:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
                   <span style="font-size:16px;"><b>Birth Date:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
-                  <span style="font-size:16px;"><b>Member Since:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
+                  <span style="font-size:16px;"><b>Date of joining:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
                 </div>
               </div>
                             <!-- /.col -->
               <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Memoronda</b></h3>
               <div class="pm col-md-12" style="display:flex;justify-content:center;">
                 <div class="pmi profile-info" >
-                  <span style="font-size:16px;"><b>Adhar card:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
-                  <span style="font-size:16px;"><b>Father's Name</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
-                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
-                  <span style="font-size:16px;"><b>Mother's Name</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
-                  <span style="font-size:16px;"><b>Birth Date:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
-                  <span style="font-size:16px;"><b>Member Since:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
+                  <span style="font-size:16px;"><b>Aadhar card:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["aadharno"];?></span><br>
+                  <span style="font-size:16px;"><b>Father's Name:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["fname"];?></span><br>
+                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
+                  <span style="font-size:16px;"><b>Mother's Name:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["mname"];?></span><br>
+                  <span style="font-size:16px;"><b>occupation:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["occupation"];?></span><br>
+                  <span style="font-size:16px;"><b>Sibling(If any):</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
+                  <span style="font-size:16px;"><b>Educational Institute</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
+                  <span style="font-size:16px;"><b>Current Education</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
+                  <span style="font-size:16px;"><b>Course to Pursue:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Cousrse to pursue"]?></span><br>
+                  <span style="font-size:16px;"><b>Previous year's result:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["result"]?></span><br>
+                  <span style="font-size:16px;"><b>Amount Required:</b></span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
+
+
+                  
+                     <div class="btn-group">
+  
+                  <button type="button" class="btn btn-primary" id="adhar">Aadhar Card</button>
+
+                  <button type="button" class="btn btn-primary" id="income">Income Certificate</button>
+                
+                  <button type="button" class="btn btn-primary" id="ration">Ration Card</button>
+                  <button type="button" class="btn btn-primary" id="academic">Academic proof</button>
+                        
+                      
+                  
+                  </div>
                 </div>
               </div>
+              
 
-            </div>
+            
           <!-- /.box-footer -->
         </div>
         <!-- /.box -->
@@ -203,7 +224,24 @@
       <!-- /.col -->
     </div>
     <!-- /.row -->
-
+<script type="text/javascript">
+var btn1 = document.getElementById('adhar');
+btn.addEventListener('click', function() {
+  document.location.href = '#';
+});
+var btn2 = document.getElementById('income');
+btn.addEventListener('click', function() {
+  document.location.href = '#';
+});
+var btn3 = document.getElementById('ration');
+btn.addEventListener('click', function() {
+  document.location.href = '#';
+});
+var btn4 = document.getElementById('academic');
+btn.addEventListener('click', function() {
+  document.location.href = '#';
+});
+</script>
     <!-- Main row -->
     <div class="row" style="margin:10px -7px; ">
       <!-- Left col -->
