@@ -26,40 +26,25 @@ if(!isset($_SESSION['user_id']) && empty($_SESSION['user_id']))
 else
 {
 
-	if(
-		isset($_POST['iname']) &&
-		isset($_POST['typeedu'])
+	if(isset($_POST['iname']) && isset($_POST['typeedu']))
 		{
-			$iname=$_POST['iname'];
-			$typeedu=$_POST['typeedu'];
-			date_default_timezone_set("Asia/Kolkata");
-			$time1= time();
-			$date1= date( 'y-m-d h:i:s', $time1);
-			if(!empty($iname) && !empty($typedu))
-			{
-						$query="UPDATE login SET institute='".$iname."',typeedu='".$typeedu."'";
+			echo $iname=$_POST['iname'];
+			echo $typeedu=$_POST['typeedu'];
+						$query="UPDATE login SET institute='".$iname."',typeedu='".$typeedu."' WHERE id='".$_SESSION['user_id']."'";
 						if($query_run=mysqli_query($con,$query))
 						{
 
-							echo '<script type="text/javascript">';
-							echo 'window.location.href="../acadd.php?redirect=reg"';
-							echo '</script>';
-							echo '<div id="register"><center><b style="color:red;">You Have Registered</b></center></div><br>';
+														 echo '<script type="text/javascript">';
+							 							 echo 'window.location.href="../file_upload.php?redirect=reg"';
+							 							 echo '</script>';
+							 							 echo '<div id="register"><center><b style="color:red;">You Have Registered</b></center></div><br>';
 						}
-						else
-						{
-							echo mysqli_error($con);
-						}
+
 			}else
 			{
 				echo '<div id="register"><center><b style="color:red;">All Details are Mandatory</b></center></div><br>';
 			}
 
-		}
-		else
-		{
-			echo '<div id="register"><center><b style="color:red;">Please Fill the Details</b></center></div><br>';
-		}
 }
 ?>
 

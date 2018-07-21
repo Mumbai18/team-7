@@ -37,7 +37,7 @@
               </div>
             </div>
             <div class="form-bottom" style="display:<?php if(($_GET['redirect'])=='reg'){echo'none';}?>;">
-                <form role="form" action="login_reg_scripts/proreg.php" method="post" class="registration-form">
+                <form role="form" action="login_reg_scripts/apply2.php" method="get" class="registration-form"  enctype="multipart/form-data">
                   <div class="form-group">
                     <label style="color:white;" for="form-Institution name">Institution name</label>
                       <input type="text" name="iname" placeholder=" " class="form-first-name form-control" id="form-first-name">
