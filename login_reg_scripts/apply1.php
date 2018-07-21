@@ -45,7 +45,7 @@ else
 			$date1= date( 'y-m-d h:i:s', $time1);
 			if(!empty($fname) && !empty($mname) && !empty($loan) && !empty($contact) && !empty($pemail))
 			{
-						$query="UPDATE login SET fname='".$fname."', mname='".$mname."',contact='".$contact."',amountneed='".$loan."',pemail='".$pemail."'";
+						$query="UPDATE login SET fname='".$fname."', mname='".$mname."',contact='".$contact."',amountneed='".$loan."',pemail='".$pemail."' WHERE id='".$_SESSION['user_id']."'";
 						if($query_run=mysqli_query($con,$query))
 						{
 
