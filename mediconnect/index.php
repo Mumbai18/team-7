@@ -81,7 +81,7 @@ $(document).ready(function(){
 							
 								<li class="active"><a href="index.php">Home</a></li>
 								<li class="agileits dropdown">
-									<a href="index.php#" data-toggle="dropdown" aria-expanded="true">about</a>
+									<a href="index.php#services">About</a>
 								</li>
 								</li>
 									<li class="agileits dropdown">
@@ -134,69 +134,10 @@ $(document).ready(function(){
 	<div class="container">
 		<!-- services section -->
 		<div class="w3ls-section w3_agileits-services" id="services">
-			<h2 class="agileits-title">welcome to MediConnect</h2>
+			<h2 class="agileits-title">Welcome to Jain Social Group</h2>
 			<h4 class="wthree">Place to Explore Medical Expertise</h4>
 			<p>The purpose of MediConnect is to connect people with the medicos that are professional healthcare researchers and doctors. MediConnect helps you to ask your queries regarding your health issues with the medical practitioners and can be benefited by their counseling. It also helps to build the professional careers of the doctors and expands the reachability and convenience of the community to connect with them.</p>
-			<div class="agileinfo-about-main">
-				<div class="col-md-8 demo">
-					<div id="verticalTab">
-						<ul class="resp-tabs-list">
-							
-							
-							<li>
-								<div class="tab1">
-									<h3>vision</h3>
-								</div>
-							</li>
-							<li>
-								<div class="tab1">
-									<h3>mision</h3>
-								</div>
-							</li>
-							<li>
-								<div class="tab1">
-									<h3>management</h3>
-								</div>
-
-							</li>
-						</ul>
-						<div class="resp-tabs-container">
-							<div class="tabs-right1">
-								<h6>PERSONAL ASSISTANCE</h6>
-								<p>Request a second opinion and let us do the rest! We will prepare your medical case history and match you to a shortlist of experts .</p>
-								<p class="agile-tab-txt">Your case is evaluated by a world-class medical experts .</p>
-								<p>Dedicated support team to help you with your problems ,Receive a detailed second opinion for your diagnosis and treatment options ,Highest quality care and exceptional results</p>
-								<div class="button">
-									<a href="about.php">Get More<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
-								</div>
-							</div>
-							<div class="tabs-right1">
-								<h6>100 % SATISFACTION</h6>
-								<p>45% of total Indian ppopulation don't get their medical treatments due to variety of problems namely financial weakness,ignorance,fear of various entities</p>
-								<p class="agile-tab-txt">MediConnect gives a solution to all of your problems.This social networking site allows you to overcome all the social intimidations that is preventing you to seek or ask about you health</p>
-								<p>Via online doctor chat our leading, board-certified physicians provide provisional diagnosis, treatment and follow-up recommendations for most health issues - the common ones to the complex cases which may require second opinions, multi-specialty consultations. </p>
-								<div class="button">
-									<a href="about.php">Get More<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
-								</div>
-							</div>
-							<div class="tabs-right1">
-								<h6>SPECIALIST NETWORK</h6>
-								<p>Ask A Doctor Free – Medical Questions Answered. Medical Doctors – Medical Experts Available Now To Answer Your Health Questions Online.</p>
-								<p class="agile-tab-txt">Our Doctors and Medical Specialists Can Provide You With A Second Opinion, Health Advice, Medical Advice And Medical Consultation.</p>
-								<p>Free Service. Medical Questions Crowdsourcing gets your question answered by a large group of people from Conventional Medical Doctors to Complementary / Alternative Medicine Practitioners and Medical Specialists as well as Patients, Experts and Knowledgeable Individuals.</p>
-								<div class="button">
-									<a href="about.php">Get More<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div style="height: 30px; clear: both"></div>
-				</div>
-				<div class="col-md-4 w3ls-about-right">
-					<img src="images/home.jpg" class="img-responsive" alt="" />
-				</div>
-				<div class="clearfix"></div>
-			</div>
+			
 		</div>
 		<script src="js/easy-responsive-tabs.js"></script>
 		<script>
@@ -232,7 +173,7 @@ $(document).ready(function(){
 						</div>
 						<div class="icon-right">
 							<h5>Stay Connected</h5>
-							<p>Get details of doctors available offline as well as online in your area</p>
+							<p>...............</p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -243,8 +184,8 @@ $(document).ready(function(){
 							<i class="fa fa-cog" aria-hidden="true"></i>
 						</div>
 						<div class="icon-right">
-							<h5>SPECIALIST REPLIES.</h5>
-							<p>Get answers, recommendations, diagnosis, treatment plan.</p>
+							<h5>Transparency</h5>
+							<p>.................</p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -255,20 +196,20 @@ $(document).ready(function(){
 							<i class="fa fa-television" aria-hidden="true"></i>
 						</div>
 						<div class="icon-right">
-							<h5>POST QUESTION.</h5>
-							<p>Describe your health concern. Upload reports, pictures, if any. </p>
+							<h5>Scrutinity</h5>
+							<p>................ </p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 col-xs-6 w3ls-markets-grid text-center">
+								<div class="col-md-3 col-sm-6 col-xs-6 w3ls-markets-grid text-center">
 					<div class="agileits-icon-grid">
 						<div class="icon-left">
-							<i class="fa fa-tasks" aria-hidden="true"></i>
+							<i class="fa fa-television" aria-hidden="true"></i>
 						</div>
 						<div class="icon-right">
-							<h5>FREE FOLLOW-UPS.</h5>
-							<p>Seek clarifications, ask further questions, share more reports, change in condition . </p>
+							<h5>Semi Automated</h5>
+							<p>................ </p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -370,35 +311,6 @@ $(document).ready(function(){
 	<!-- footer -->
 	<div class="footer">
 		
-		<div class="agile_footer_grids">
-			<div class="col-md-4 col-sm-4 col-xs-4 w3_footer_grid agile_footer_grids_w3_footer">
-				<div class="w3_footer_grid_bottom contact">
-					<h3>Contact Info</h3>
-					<ul>
-						<li><span class="fa fa-map-marker" aria-hidden="true"></span><p>D.J. Sanghvi ,Vile Parle West, Mumbai, Maharashtra 400056</p></li>
-						<li><span class="fa fa-envelope-o" aria-hidden="true"></span><a href="mailto:mediconnect@gmail.com">mediconnect@gmail.com</li>
-						<li><span class="fa fa-phone" aria-hidden="true"></span><p>+1234 567 567</p></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-4  col-xs-4 w3_footer_grid agile_footer_grids_w3_footer">
-				<div class="w3_footer_grid_bottom">
-					<h3>Legal</h3>
-					<ul class="w3_footer_grid_list">
-						<li><a href="terms.php">Terms & Conditions</a></li>
-						<li><a href="privacy.php">Privacy Policy</a></li>
-						<li><a href="terms.php">Disclaimer</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-4  col-xs-4 w3_footer_grid agile_footer_grids_w3_footer">
-				<div class="w3_footer_grid_bottom contact">
-					<h3>User Map</h3>
-					<img src="images/map.jpg" class="img-responsive" alt=""/>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
 		<div class="wthree_footer_copy">
 			<p>© 2017 MediConnect. All rights reserved | Design by <a href="http://w3layouts.com/"> mediconnect </a></p>
 		</div>
