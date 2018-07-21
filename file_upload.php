@@ -82,6 +82,21 @@
   <!-- Content Wrapper. Contains page content -->
 
   <div class="content-wrapper">
+    <div class="modal fade bd-example-modal-lg error" id="success" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg1">
+        <div class="modal-content" style="width:100%:">
+          <div class="modal-header">
+            <h3 class="modal-title" >Success</h3>
+          </div>
+          <div class="modal-body xsfonts" style="" id="folist2">
+            Application Submission Successful
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" style="font-size:15px;" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="content">
       <?php
       if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']))
@@ -106,21 +121,8 @@
                 else
                 {
 
-                     if(move_uploaded_file($tmp_name,$location.'/'.$user_id.'.jpg'))
+                if(move_uploaded_file($tmp_name,$location.'/'.$user_id.'.jpg'))
           		   {
-          		   	$im=$location.$name.'.jpg';
-          			@$im_size=getimagesize($im);
-          			$im_width=$im_size[0];
-          			$im_height=$im_size[1];
-          			@$new_size=($im_width+$im_height)/($im_width*($im_height/100));
-          			$new_width=$im_width*$new_size;
-          			$new_height=$im_height*$new_size;
-          			@$new_image=imagecreatetruecolor($new_width,$new_height);
-          			@$old_image=imagecreatefromjpeg($im);
-          			@imagecopyresized($new_image,$old_image,0,0,0,0,$new_width,$new_height,$im_width,$im_height);
-          			@imagejpeg($new_image,$location1.$name.'.jpg');
-
-          		   $url='main_forum.php';
 
           		   }
           		    else
@@ -165,19 +167,6 @@
 
                      if(move_uploaded_file($tmp_name,$location.'/'.$user_id.'.jpg'))
           		   {
-          		   	$im=$location.$name.'.jpg';
-          			@$im_size=getimagesize($im);
-          			$im_width=$im_size[0];
-          			$im_height=$im_size[1];
-          			@$new_size=($im_width+$im_height)/($im_width*($im_height/100));
-          			$new_width=$im_width*$new_size;
-          			$new_height=$im_height*$new_size;
-          			@$new_image=imagecreatetruecolor($new_width,$new_height);
-          			@$old_image=imagecreatefromjpeg($im);
-          			@imagecopyresized($new_image,$old_image,0,0,0,0,$new_width,$new_height,$im_width,$im_height);
-          			@imagejpeg($new_image,$location1.$name.'.jpg');
-
-          		   $url='main_forum.php';
 
           		   }
           		    else
@@ -220,22 +209,17 @@
                 else
                 {
 
-                     if(move_uploaded_file($tmp_name,$location.'/'.$user_id.'.jpg'))
+                if(move_uploaded_file($tmp_name,$location.'/'.$user_id.'.jpg'))
           		   {
-          		   	$im=$location.$name.'.jpg';
-          			@$im_size=getimagesize($im);
-          			$im_width=$im_size[0];
-          			$im_height=$im_size[1];
-          			@$new_size=($im_width+$im_height)/($im_width*($im_height/100));
-          			$new_width=$im_width*$new_size;
-          			$new_height=$im_height*$new_size;
-          			@$new_image=imagecreatetruecolor($new_width,$new_height);
-          			@$old_image=imagecreatefromjpeg($im);
-          			@imagecopyresized($new_image,$old_image,0,0,0,0,$new_width,$new_height,$im_width,$im_height);
-          			@imagejpeg($new_image,$location1.$name.'.jpg');
+                    $appquery="INSERT INTO application VALUES('','".$user_id."','1','".$row1['institute']."','".$row1['typeedu']."','".$row1['result']."','".$row1['income']."','2017','".$row1['occupation']."','','','','')";
 
-          		   $url='main_forum.php';
-
+                    if($query_run=mysqli_query($con,$appquery))
+                    {
+                      $url='../file_upload.php#success'';
+                    	echo '<script type="text/javascript">';
+                    	echo 'window.location.href="'.$url.'";';
+                    	echo '</script>';
+                    }
           		   }
           		    else
           		    {
@@ -413,7 +397,10 @@
       <?php
       }
       else {
-
+        $url='../login.php';
+      	echo '<script type="text/javascript">';
+      	echo 'window.location.href="'.$url.'";';
+      	echo '</script>';
       }
 
       ?>

@@ -109,28 +109,7 @@
                   {
                   ?>
                     <br>
-                    <button style="padding:;background:green;color:white;;margin-top:10px;" id="button<?php echo $user_id;?>" onclick="followinc(this.id);">
-                      <?php
-                      $u_id=$_GET['id'];
-                      $queryf="SELECT * FROM login WHERE id='$u_id'";
-                      $queryf_run=mysqli_query($con,$queryf);
-                      $queryf_array=mysqli_fetch_assoc($queryf_run);
-                      $follow=$queryf_array['follow'];
-                      $x= explode(',',$follow);
-                      $flag=0;
-                      foreach($x as $x_a)
-                      {
-                        if($x_a==$_SESSION['user_id']){
-                          echo 'Following';
-                          $flag=1;
-                          break;
-                        }
-                      }
-                      if($flag==0)
-                      {
-                        echo 'Follow';
-                      }
-                      ?>
+                    
                     </button>
                     <?php
                   }
@@ -157,7 +136,7 @@
               <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Details</b></h3>
               <div class="pm col-md-12" style="display:flex; padding-left:10%; font-size: 15px; color:white">
                 <div class="pmi profile-info" >
-<<<<<<< HEAD
+
                   <span style="font-size:18px;"><b>Aadhar card: </b></span><span style="font-size:16px;"><?php echo $rows["aadharno"];?></span><br>
                   <span style="font-size:18px;"><b>Father's Name: </b></span><span style="font-size:16px;"><?php echo $rows["fname"];?></span><br>
                   <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span><span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
@@ -190,10 +169,10 @@
                 </div>
 
 
-              <div class="pm col-md-12" style="overflow: hidden; display:flex;justify-content:center; ">
+              <div class="pm col-md-12" style="display:flex; justify-content:center; ">
                   <!-- <iframe id="myFrame" src="/line.html?id=1" style="height:380px;width:100%"></iframe> -->
-                  <object data="line.html" width="600" height="500" style="zoom:0.75; display:flex;justify-content:center; overflow: hidden;">
-                  <embed src="line.html?id=1" style="display:flex;justify-content:center; overflow: hidden;"> </embed>
+                  <object data="line.html" width="900" height="500" style=" display:flex; overflow: hidden; zoom:0.75;justify-content:center;">
+                  <embed src="line.html?id=1" width="900" height="500" style="display:flex; overflow: hidden;justify-content:center;"> </embed>
                   Error: Embedded data could not be displayed.
               </object>
               </div>
