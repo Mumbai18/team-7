@@ -75,7 +75,7 @@
       <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
         <div class="box boxzol" style=" margin-top:10px">
           <!-- /.box-header -->
-          
+
                 <div class="box-body">
                   <div class="row">
                     <div class="col-md-3 pro-box" style="">
@@ -108,8 +108,8 @@
                     </div>
 
                     
-                    <div class="pmi text-center profile-info" style="display:flex; vertical-align: center; justify-content: center;">
-                    <button class="btn boxzol" onclick="window.open('profile.php')" >View Application</button>
+                    <div class="pmi text-center profile-info" style="display:flex; vertical-align: center; justify-content: center; text-align: center;">
+                    <button class="btn boxzol" onclick="window.open('profile.php')" style="top: 50%;">View Application</button>
                   </div>
                   </div>
             <!-- /.row -->
