@@ -85,15 +85,12 @@ $(document).ready(function(){
 								</li>
 								</li>
 									<li class="agileits dropdown">
-									<a href="#" data-toggle="dropdown" aria-expanded="true">Features</a>
+									<a href="index.php#services">Features</a>
 								</li>
 								
 									<li class="agileits dropdown">
-									<a href="#" data-toggle="dropdown" aria-expanded="true">Account</a>
-									<ul class="dropdown-menu agile_short_dropdown">
-										<li><a href="" class="login" data-toggle="modal" data-target="#myModal4">login</a></li>
-										<li><a href="#" class="login reg"  data-toggle="modal" data-target="#myModal5">register</a></li>
-									</ul>
+									<a href="">Account</a>
+									
 								</li>
 								<li><a href="contact.php">contact us</a></li>
 							</ul>
@@ -136,7 +133,7 @@ $(document).ready(function(){
 		<div class="w3ls-section w3_agileits-services" id="services">
 			<h2 class="agileits-title">Welcome to Jain Social Group</h2>
 			<h4 class="wthree">Place to Explore Medical Expertise</h4>
-			<p>The purpose of MediConnect is to connect people with the medicos that are professional healthcare researchers and doctors. MediConnect helps you to ask your queries regarding your health issues with the medical practitioners and can be benefited by their counseling. It also helps to build the professional careers of the doctors and expands the reachability and convenience of the community to connect with them.</p>
+			<p>............</p>
 			
 		</div>
 		<script src="js/easy-responsive-tabs.js"></script>
@@ -219,100 +216,11 @@ $(document).ready(function(){
 		</div>
 		<!-- //markets -->
 
-		<!-- offers -->
-		<div class="w3ls-section offers">
-			<div class="offers-grids">
-				<div class="wthree-offers-right">
-					<div class="col-md-7  col-sm-8 col-xs-8 wthree-offers1-right">
-						<h4>MediConnect | Connecting Your Lives</h4>
-						<p>We at Mediconnect believe in embracing the futuristic way of communications</p>
-						<ul>
-							<li><a ><i class="fa fa-angle-right" aria-hidden="true"></i> Ask Questions to Doctors who are available</a></li>
-							<li><a ><i class="fa fa-angle-right" aria-hidden="true"></i> Read Articles to know about advances in field  of medicine</a></li>
-							<li><a ><i class="fa fa-angle-right" aria-hidden="true"></i> Donate to people through our crowdfunding programs</a></li>
-							<li><a ><i class="fa fa-angle-right" aria-hidden="true"></i> Get Appointment online and avoid queues</a></li>
-							<li><a ><i class="fa fa-angle-right" aria-hidden="true"></i> Maintain a professional medical profile of your own</a></li>
-						</ul>
-					</div>
-					<div class="col-md-5 col-sm-1  col-xs-4 wthree-offers1">
-						<img src="images/sat.jpg" alt="" class="img-responsive" />
-					</div>
-
-					<div class="clearfix"> </div>
-				</div>
-				<div class="w3ls-offers-main">
-					<div class="col-md-5  col-sm-4 col-xs-4 wthree-offers1">
-						<img src="images/sat.png" alt="" class="img-responsive" />
-					</div>
-					<div class="col-md-7  col-sm-8 col-xs-8 wthree-offers-left">
-						<div class="offers-left-heading">
-							<h4>All About Mediconnect</h4>
-							<h5>Your fast guide to get started</h5>
-						</div>
-						<div class="offers-left-grids">
-							<div class="offers-number">
-								<p>1</p>
-							</div>
-							<div class="offers-text">
-								<p>Register with Mediconnect in order to acces Posts, Login and access your personal profile</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="offers-left-grids offers-left-middle">
-							<div class="offers-number">
-								<p>2</p>
-							</div>
-							<div class="offers-text">
-								<p>Enter your details and make sure you follow the Doctors you are interested in</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="offers-left-grids">
-							<div class="offers-number">
-								<p>3</p>
-							</div>
-							<div class="offers-text">
-								<p>Explore Your Interests, ask the right questions and use all the appropriate services we provide to you!</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-		<!-- offers -->
-		<div class="service-bottom">
-				<div class="services-w3ls-row agileits-w3layouts">
-					<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts text-center">
-						<i class="fa fa-envelope-o" aria-hidden="true"></i>
-						<h5>Inquiry</h5>
-
-					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts text-center">
-						<i class="fa fa-comments" aria-hidden="true"></i>
-						<h5>24/7 Support</h5>
-
-					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts text-center">
-						<i class="fa fa-question" aria-hidden="true"></i>
-						<h5>Ask Questions</h5>
-
-					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts text-center">
-						<i class="fa fa-list-alt" aria-hidden="true"></i>
-						<h5>Appointments</h5>
-
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-	</div>
-	<!-- footer -->
+			<!-- footer -->
 	<div class="footer">
 		
 		<div class="wthree_footer_copy">
-			<p>© 2017 MediConnect. All rights reserved | Design by <a href="http://w3layouts.com/"> mediconnect </a></p>
+			<p>© 2017 Jain Social Group. All rights reserved | Design by <a href="http://w3layouts.com/"> Jain Social Group </a></p>
 		</div>
 	</div>
 	<!-- //footer -->
