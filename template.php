@@ -85,46 +85,6 @@
             <!-- /.row -->
           </div>
           <!-- ./box-body -->
-          <div class="box-footer">
-            <div class="row">
-              <div class="col-sm-3 col-xs-6">
-                <div class="description-block border-right">
-                  <h5 class="description-header text-green"><i class="fa fa-user"></i> &nbsp;Followers</h5>
-                  <span class="description-text">
-                    15<br><a href="#" id="followers" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="modalfunc(1);">See all</a>                  </span>
-                </div>
-                <!-- /.description-block -->
-              </div>
-              <!-- /.col -->
-              <div class="col-sm-3 col-xs-6">
-                <div class="description-block border-right">
-                  <h5 class="description-header text-blue"><i class="fa fa-user"></i> &nbsp;Following</h5>
-                  <span class="description-text">
-                    67<br><a href="#" id="followers" data-toggle="modal" data-target=".bd-example-modal-lg2" onclick="modalfunc(2);">See all</a>                  </span>
-                </div>
-                <!-- /.description-block -->
-              </div>
-              <!-- /.col -->
-              <div class="col-sm-3 col-xs-6">
-                <div class="description-block border-right">
-                  <h5 class="description-header text-red"><i class="fa fa-newspaper-o"></i> &nbsp;Forum Post</h5>
-                  <span class="description-text">
-                    0                  </span>
-                </div>
-                <!-- /.description-block -->
-              </div>
-              <!-- /.col -->
-              <div class="col-sm-3 col-xs-6">
-                <div class="description-block">
-                  <h5 class="description-header text-yellow"><i class="fa fa-cart-plus"></i> &nbsp;User Type</h5>
-                  <span class="description-text">
-                    Patient                  </span>
-                </div>
-                <!-- /.description-block -->
-              </div>
-            </div>
-            <!-- /.row -->
-          </div>
           <!-- /.box-footer -->
         </div>
         <!-- /.box -->
@@ -132,6 +92,7 @@
       <!-- /.col -->
     </div>
     <!-- /.row -->
+</div>
 </div>
 <?php
 include'footer.php';
