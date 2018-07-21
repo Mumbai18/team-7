@@ -17,9 +17,9 @@
   <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper" style="background-image:url('images/backgrounds/1.jpg');padding-bottom:2%;background-repeat: no-repeat;background-size: cover;" >
       <div class="row" style="margin:0 3%;">
-        
+
         <?php
-          if(!isset($_SESSION['user_id']) && empty($_SESSION['user_id']))
+          if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']))
           {
         ?>
 
@@ -27,9 +27,9 @@
           <div class="form-box" >
             <div class="form-top">
               <div class="form-top-left">
-                <?php 
-                    echo '<h3>Sign up now</h3>
-                    <p>Register below to get instant access:</p>';
+                <?php
+                    echo '<h3>Academics Details</h3>
+                    <p>Give your Academic Details to apply for scholarship</p>';
                 ?>
               </div>
               <div class="form-top-right">
@@ -39,20 +39,26 @@
             <div class="form-bottom" style="display:<?php if(($_GET['redirect'])=='reg'){echo'none';}?>;">
                 <form role="form" action="login_reg_scripts/proreg.php" method="post" class="registration-form">
                   <div class="form-group">
-                    <label for="form-Institution name">Institution name</label>
-                      <input type="text" name="firstname1" placeholder=" " class="form-first-name form-control" id="form-first-name">
-                  </div> 
-                  <div class="form-group">
-                    <label  for="Previous  Education">Previous Education</label>
-                      <input type="text" name="surname1" placeholder=" " class="form-last-name form-control" id="form-last-name">
+                    <label style="color:white;" for="form-Institution name">Institution name</label>
+                      <input type="text" name="iname" placeholder=" " class="form-first-name form-control" id="form-first-name">
+                  </div>
+                  <div style="color:white;" class="form-group">
+                    <h5>Pursueing Field:</h5>
+                  </div>
+                  <div class="form-group" >
+                    <select name="typeedu" style="width:50%;font-family: 'Roboto', sans-serif;color: #888;font-size: 16px;height: 50px;font-weight: 300;line-height: 50px;">
+                      <option value="7th Std">7th Std</option><option value="8th Std">8th Std</option><option value="9th Std">9th Std</option>
+                      <option value="10th Std">10th Std</option><option value="11th Std">11th Std</option><option value="12th">12th Std</option>
+                      <option value="Grad 1st year">Graduation 1st Year</option>
+                      <option value="Grad 2nd year">Graduation 2nd Year</option>
+                      <option value="Grad 3rd year">Graduation 3rd Year</option>
+                      <option value="Grad 4th year">Graduation 4th Year</option>
+                      <option value="Grad 5th year">Graduation 5th Year</option>
+                    </select>
                   </div>
                   <div class="form-group">
-                    <label for="form-email">Aiming to persue </label>
-                    <input type="text" name="email1" placeholder=" " class="form-email form-control" id="form-email">
-                  </div>
-                  <div class="form-group">
-                    <label for="form-email">Id card</label>
-                    <input type="text" name="password1" placeholder=" " class="form-email form-control" id="form-email">
+                    <label style="color:white;" for="form-email">Id card</label>
+                    <input type="file" name="idcard" placeholder=" " class="form-email form-control" id="form-email">
                   </div>
                   <button type="submit" class="btn">Sign me up!</button>
                 </form>
