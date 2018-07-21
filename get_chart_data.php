@@ -9,13 +9,18 @@ $sqlQuery = "SELECT year,result,income FROM application WHERE id = ".$student_id
 
 $result = mysqli_query($con,$sqlQuery);
 
-
-echo $result;
-
-$data = array();
-foreach ($result as $row) {
-	$data[] = $row;
+$rows = array();
+while($r = mysqli_fetch_assoc($result)) {
+    $rows[] = $r;
 }
+print json_encode($rows);
+
+// print_r($result);
+
+// $data = array();
+// foreach ($result as $row) {
+// 	$data[] = $row;
+// }
 
 // $data = array(
 //     array(
@@ -57,5 +62,5 @@ foreach ($result as $row) {
 
 mysqli_close($con);
 
-echo json_encode($data);
+echo json_encode($rows);
 ?>
