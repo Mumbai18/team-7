@@ -140,15 +140,15 @@
               <!-- /.col -->
               <!-- /.col -->
 			  <div class="col-md-12" style="display:flex">
-              <div class="pm col-md-5" style="display:flex; padding-left:15%; padding-right:5%">
+              <div class="pm col-md-5" style="display:flex; padding-left:15%; padding-right:10%">
                 <div class="pmi profile-info" style="font-size: 15px; color:white">
                   <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>Personal Memoronda</b></h4><br>
-                  <span style="font-size:16px;"><b style="font-color:white">Name:</b></span><span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
-                  <span style="font-size:16px;"><b>Email ID:</b></span><span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
-                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span><span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
-                  <span style="font-size:16px;"><b>Gender:</b></span><span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
-                  <span style="font-size:16px;"><b>Birth Date:</b></span><span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
-                  <span style="font-size:16px;"><b>Date of joining:</b></span><span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
+                  <span style="font-size:18px;"><b style="font-color:white">Name: </b></span><span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
+                  <span style="font-size:18px;"><b>Email ID: </b></span><span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
+                  <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno: </b></span><span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
+                  <span style="font-size:18px;"><b>Gender: </b></span><span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
+                  <span style="font-size:18px;"><b>Birth Date: </b></span><span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
+                  <span style="font-size:18px;"><b>Date of joining: </b></span><span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
                 </div>
               </div>
 			
@@ -156,23 +156,23 @@
               <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Details</b></h3>
               <div class="pm col-md-12" style="display:flex; padding-left:10%; font-size: 15px; color:white">
                 <div class="pmi profile-info" >
-                  <span style="font-size:16px;"><b>Aadhar card:</b></span><span style="font-size:16px;"><?php echo $rows["aadharno"];?></span><br>
-                  <span style="font-size:16px;"><b>Father's Name:</b></span><span style="font-size:16px;"><?php echo $rows["fname"];?></span><br>
+                  <span style="font-size:18px;"><b>Aadhar card: </b></span><span style="font-size:16px;"><?php echo $rows["aadharno"];?></span><br>
+                  <span style="font-size:18px;"><b>Father's Name: </b></span><span style="font-size:16px;"><?php echo $rows["fname"];?></span><br>
                   <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span><span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
-                  <span style="font-size:16px;"><b>Mother's Name:</b></span><span style="font-size:16px;"><?php echo $rows["mname"];?></span><br>
-                  <span style="font-size:16px;"><b>occupation:</b></span><span style="font-size:16px;"><?php echo $rows["occupation"];?></span><br>
-                  <span style="font-size:16px;"><b>Sibling(If any):</b></span><span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
-                  <span style="font-size:16px;"><b>Educational Institute</b></span><span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
-                  <span style="font-size:16px;"><b>Current Education</b></span><span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
-                  <span style="font-size:16px;"><b>Course to Pursue:</b></span><span style="font-size:16px;"><?php echo $rows["Course to pursue"];?></span>
-                  <span style="font-size:16px;"><b>Previous year's result:</b></span><span style="font-size:16px;"><?php echo $rows["result"];?></span><br>
-                  <span style="font-size:16px;"><b>Amount Required:</b></span><span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
+                  <span style="font-size:18px;"><b>Mother's Name: </b></span><span style="font-size:16px;"><?php echo $rows["mname"];?></span><br>
+                  <span style="font-size:18px;"><b>occupation: </b></span><span style="font-size:16px;"><?php echo $rows["occupation"];?></span><br>
+                  <span style="font-size:18px;"><b>Sibling(If any): </b></span><span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
+                  <span style="font-size:18px;"><b>Educational Institute: </b></span><span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
+                  <span style="font-size:18px;"><b>Current Education: </b></span><span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
+                  <span style="font-size:18px;"><b>Course to Pursue: </b></span><span style="font-size:16px;"><?php echo $rows["Course to pursue"];?></span>
+                  <span style="font-size:18px;"><b>Previous year's result: </b></span><span style="font-size:16px;"><?php echo $rows["result"];?></span><br>
+                  <span style="font-size:18px;"><b>Amount Required: </b></span><span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
 
 				</div>
 				</div>
 				</div>
                   
-                     <div class="btn-group" style="">
+                     <div class="btn-group">
   
                   <button type="button" class="btn btn-primary" id="adhar">Aadhar Card</button>
 
