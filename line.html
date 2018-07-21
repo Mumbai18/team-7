@@ -24,26 +24,33 @@
 		     display(this.responseText);
 		    }
 		  };
-		  xhttp.open("post", "get_chart_data.php", true);
+		  xhttp.open("get", "get_chart_data.php?id=1", true);
+		  // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		  // xhttp.send("id=1");
 		  xhttp.send();
 
 		 // $.post("get_chart_data.php",
                 function display(data)
                 {
-                    console.log(data);
-                    var data_json = JSON.parse(data);
-                     var playerid = [];
-                    var score = [];
-                    
+                    // console.log(data);
+                    var data_json = JSON.parse(JSON.stringify(data));
+                    var year = [];
+                    var income = [];
+                    var result = [];
+                    console.log(data_json);
+
+
 
                     for (var i in data_json) {
-                        playerid.push(data_json[i].playerid);
-                        score.push(data_json[i].score);
+                    	console.log(data_json[i].year);
+                        year.push(parseFloat(data_json[i].year));
+                        income.push(parseFloat(data_json[i].income));
+                        result.push(parseFloat(data_json[i].result));
                     }
-                    console.log("playerid = " + playerid[0]);
+                    console.log("year = " + year[0]);
 
                     var chartdata = {
-                        labels: playerid,
+                        labels: year,
                         datasets: [
                             {
                                 label: 'Student Marks',
@@ -51,7 +58,15 @@
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
-                                data: score
+                                data: result
+                            },
+                            {
+                                label: 'Income',
+                                backgroundColor: '#49e2ff',
+                                borderColor: '#46d5f1',
+                                hoverBackgroundColor: '#CCCCCC',
+                                hoverBorderColor: '#666666',
+                                data: income
                             }
                         ]
                     };
