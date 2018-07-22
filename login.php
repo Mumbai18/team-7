@@ -139,7 +139,7 @@
             if($user_type=="1")
             {
               echo '<script type="text/javascript">';
-              echo 'window.location.href="profile";';
+              echo 'window.location.href="profile.php";';
               echo '</script>';
             }
             else if($user_type=="2")
@@ -151,7 +151,7 @@
             else if($user_type=="3")
             {
               echo '<script type="text/javascript">';
-              echo 'window.location.href="donar.php";';
+              echo 'window.location.href="donor.php";';
               echo '</script>';
             }
             else if($user_type=="4")

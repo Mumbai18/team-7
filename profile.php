@@ -83,7 +83,7 @@
       $rows=mysqli_fetch_assoc($query_run);
     }
 ?>
-  
+
 
   <div class="content-wrapper" style="background-image:url('images/backgrounds/1.jpg');padding-bottom:2%;background-repeat: no-repeat;background-size: cover;">
     <div class="row" style="margin:0 3%;"></div>
@@ -109,14 +109,14 @@
                   {
                   ?>
                     <br>
-                    
+
                     </button>
                     <?php
                   }
                   ?>
                 </div>
               </div>
-          
+
               <!-- /.col -->
               <!-- /.col -->
 			  <div class="col-md-12" style="display:flex">
@@ -131,7 +131,7 @@
                   <span style="font-size:18px;"><b>Date of joining: </b></span><span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
                 </div>
               </div>
-			
+
                             <!-- /.col -->
               <h3 class="pmh text-center visible-sm visible-xs" style="font-size:20px;"><b>Personal Details</b></h3>
               <div class="pm col-md-12" style="display:flex; padding-left:10%; font-size: 15px; color:white">
@@ -145,23 +145,23 @@
                   <span style="font-size:18px;"><b>Sibling(If any): </b></span><span style="font-size:16px;"><?php echo $rows["sibling"];?></span><br>
                   <span style="font-size:18px;"><b>Educational Institute: </b></span><span style="font-size:16px;"><?php echo $rows["institute"];?></span><br>
                   <span style="font-size:18px;"><b>Current Education: </b></span><span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
-                  <span style="font-size:18px;"><b>Course to Pursue: </b></span><span style="font-size:16px;"><?php echo $rows["typeedu"];?></span>
+                  <span style="font-size:18px;"><b>Course to Pursue: </b></span><span style="font-size:16px;"><?php echo $rows["typeedu"];?></span><br>
                   <span style="font-size:18px;"><b>Previous year's result: </b></span><span style="font-size:16px;"><?php echo $rows["result"];?></span><br>
-                  <span style="font-size:18px;"><b>Amount Required: </b></span><span style="font-size:16px;"><?php echo $rows["amount"];?></span><br><br><br>
+                  <span style="font-size:18px;"><b>Amount Required: </b></span><span style="font-size:16px;"><?php echo $rows["amountneed"];?></span><br><br><br>
 
 				</div>
 				</div>
 				</div>
-                  
+
 
                      <div class="btn-group">
 
-                  <button type="button" class="btn btn-primary" id="adhar">Aadhar Card</button>
+                  <a href="images/files/Bank Statement/<?php echo$user_id;?>.jpg" target="_blank"><button type="button" class="btn btn-primary" id="adhar">College Id</button></a>
 
-                  <button type="button" class="btn btn-primary" id="income">Income Certificate</button>
+                  <a href="images/files/Income Certificate/<?php echo $user_id;?>.jpg" target="_blank"><button type="button" class="btn btn-primary" id="income">Income Certificate</button>
 
-                  <button type="button" class="btn btn-primary" id="ration">Ration Card</button>
-                  <button type="button" class="btn btn-primary" id="academic">Academic proof</button>
+                  <a href="images/files/Ration Card/<?php echo $user_id;?>.jpg" target="_blank"><button type="button" class="btn btn-primary" id="ration">Ration Card</button>
+                  <a href="images/files/Bank Statement/<?php echo $user_id;?>.jpg" target="_blank"><button type="button" class="btn btn-primary" id="academic">Academic proof</button>
 
 
 
@@ -182,16 +182,16 @@
 
 
           <!-- /.box-footer -->
-        
+
         <!-- /.box -->
-      
+
       <!-- /.col -->
     </div>
     <!-- /.row -->
 <script type="text/javascript">
 var btn1 = document.getElementById('adhar');
 btn.addEventListener('click', function() {
-  document.location.href = '#';
+  document.location.href = 'profi';
 });
 var btn2 = document.getElementById('income');
 btn.addEventListener('click', function() {

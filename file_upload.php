@@ -116,7 +116,7 @@
                {
                 if(file_exists($location.'/'.$user_id.'.jpg'))
                 {
-                    echo '<script>alert("error")</script>';
+                  //  echo '<script>alert("error")</script>';
                 }
                 else
                 {
@@ -160,7 +160,7 @@
                {
                 if(file_exists($location.'/'.$user_id.'.jpg'))
                 {
-                    echo '<script>alert("error")</script>';
+                    //echo '<script>alert("error")</script>';
                 }
                 else
                 {
@@ -204,7 +204,7 @@
                {
                 if(file_exists($location.'/'.$user_id.'.jpg'))
                 {
-                    echo '<script>alert("error")</script>';
+                    //echo '<script>alert("error")</script>';
                 }
                 else
                 {
@@ -219,6 +219,11 @@
                     	echo '<script type="text/javascript">';
                     	echo 'window.location.href="'.$url.'";';
                     	echo '</script>';
+                      ?>
+                      <script>
+                            $('#success').modal('toggle');
+                      </script>
+                      <?php
                     }
           		   }
           		    else
@@ -310,7 +315,7 @@
           <!-- PRODUCT LIST -->
           <div class="box box-primary" style="border-top-color:#d2d6de;">
             <div class="box-header with-border bg-title" style="">
-              <h3 class="box-title" style="color:white;">Upload Bank Statement</h3>
+              <h3 class="box-title" style="color:white;">Upload College ID</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -421,11 +426,11 @@
    include'footer.php';
 
 ?>
-<!--<script>
+<script>
   //shortcut for $(document).ready
   var hash = window.location.hash;
   if (hash.substring(1) == 'success')
   {
       $(hash).modal('toggle');
   }
-</script>-->
+</script>
