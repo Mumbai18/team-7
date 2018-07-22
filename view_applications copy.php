@@ -75,6 +75,7 @@
       <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
         <div class="box boxzol" style=" margin-top:10px">
           <!-- /.box-header -->
+
                 <div class="box-body">
                   <div class="row">
                     <div class="col-md-3 pro-box" style="">
@@ -92,6 +93,54 @@
                     ?>.jpg" class="img-circle" width="100px" height="100px">
                     </div>
                 </div>
+
+
+                              <?php
+                              $user=$_SESSION['user_id'];
+                              $get_user="SELECT * from login where id='$user'";
+                              $query=mysqli_query($conn,$get_user);
+while($row_posts=mysqli_fetch_array($query)){
+                                  // include 'connection.php';
+                                  $post_id=$row_posts['post_id'];
+                                  $id=$row_posts['id'];
+                                  $post_title=$row_posts['post_title'];
+                                  $post_content=$row_posts['post_content'];
+                                  $post_date=$row_posts['post_date'];
+
+                                  //getting the user who has posted the thread
+
+                                  $user="SELECT * from authenticate_user where id='$id' AND posts='yes'";
+                                  $run_user=mysqli_query($conn,$user);
+                                  $row_user=mysqli_fetch_array($run_user);
+                                  $name=$row_user['name'];
+                                  $u_image=$row_user['u_image'];
+
+                                  
+                                  
+
+
+                                  echo "
+                                   <div class="pm col-md-5" style="display:flex;justify-content:center;">
+                      <div class="pmi profile-info" >
+                        <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>Personal Details</b></h4>
+                        <span style="font-size:16px;"><b>Name:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["firstname"].' '.$rows["surname"];?></span><br>
+                        <span style="font-size:16px;"><b>Email ID:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["email"];?></span><br>
+                        <?php if($user_type==2){?><span style="font-size:16px;"><b>Regno:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["Regid"];?></span><br><?php }?>
+                        <span style="font-size:16px;"><b>Gender:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo $rows["gender"];?></span><br>
+                        <span style="font-size:16px;"><b>Birth Date:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("d M Y",strtotime($rows["dob"]));?></span><br>
+                        <span style="font-size:16px;"><b>Member Since:</b></span>&nbsp&nbsp&nbsp<span style="font-size:16px;"><?php echo date("M Y",strtotime($rows['doj']));?></span><br>
+                      </div>
+                    </div>
+                                   ";
+
+                                  }
+
+
+
+
+
+
+
                     <div class="pm col-md-5" style="display:flex;justify-content:center;">
                       <div class="pmi profile-info" >
                         <h4 class="pmh text-center visible-md visible-lg" style="font-size:20px;"><b>Personal Details</b></h4>
@@ -109,6 +158,7 @@
                     <button class="btn boxzol" onclick="window.open('profile.php')" style="top: 50%;">View Application</button>
                   </div>
                   </div>
+            <!-- /.row -->
           </div>
           <!-- ./box-body -->
           <!-- /.box-footer -->
