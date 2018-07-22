@@ -143,12 +143,12 @@ include('connection.php');
               <div class='row'>
                 <div class='col-sm-4 border-right'>
                   <div class='description-block'>
-                    <a href='appstatus.php?type=d&id=".$row['id']."'><button class='btn btn-success'>Accept</button></a>
+                    <a href='../../appstatus2.php?type=d&id=".$row['id']."'><button class='btn btn-success'>Accept</button></a>
                   </div>
                 </div>
                 <div class='col-sm-4 border-right'>
                   <div class='description-block'>
-                    <a href='appstatus.php?type=a&id=".$row['id']."'><button class='btn btn-danger'>Reject</button></a>
+                    <a href='../../appstatus2.php?type=a&id=".$row['id']."'><button class='btn btn-danger'>Reject</button></a>
                   </div>
                 </div>
                 <div class='col-sm-4 border-right'>

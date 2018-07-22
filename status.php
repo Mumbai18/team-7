@@ -80,7 +80,7 @@
       <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
         <div class="box boxzol" style="">
           <div class="box-header with-border bg-title2" style="">
-
+            <b style="color:white;">Application Status</b>
           </div>
           <!-- /.box-header -->
           <div class="box-body">

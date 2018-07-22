@@ -13,9 +13,7 @@ echo '</script>';
 if($_GET["type"]=="d")
 {
 $sql="UPDATE application SET corestatus='3' WHERE id='".$user_id."'";
-echo '<script type="text/javascript">';
 echo 'window.location.href="PHP MAILER/vendor/test.php?stat=d";';
-echo '</script>';
 }
 $query_run=mysqli_query($con,$sql);
 ?>

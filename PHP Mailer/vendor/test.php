@@ -31,7 +31,7 @@ $mail->SMTPAuth = true;
 //Username to use for SMTP authentication - use full email address for gmail
 $mail->Username = "prathmesh1297@gmail.com";
 //Password to use for SMTP authentication
-$mail->Password = "161297pmPM";
+$mail->Password = "";
 //Set who the message is to be sent from
 $mail->setFrom('prathmesh1297@gmail.com', 'First Last');
 //Set an alternative reply-to address
@@ -52,9 +52,6 @@ if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
     echo "Message sent!";
-    echo '<script type="text/javascript">';
-    echo 'window.location.href="PHP MAILER/vendor/test.php?stat=a;';
-    echo '</script>';
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
@@ -67,7 +64,7 @@ if (!$mail->send()) {
     CURLOPT_CUSTOMREQUEST => "POST",
     CURLOPT_POSTFIELDS => "{\n    \"urns\": [\"tel:+918805801591\", \"tel:+919619727915\"],\n    \"text\": \"Your Application has been accepted\"\n}\n",
     CURLOPT_HTTPHEADER => array(
-        "authorization: Token 6e5ff7ee4e1f2767adc74c47e054e9f39113c9df",
+        "authorization: Token ",
         "cache-control: no-cache",
         "content-type: application/json",
         "postman-token: 5f0857c3-8e8a-0748-0257-cf488783421a"
