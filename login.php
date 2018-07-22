@@ -134,8 +134,34 @@
           }
           else
           {
+            //echo "<script>alert('".$user_type."')</script>";
+            $url="";
+            if($user_type=="1")
+            {
+              echo '<script type="text/javascript">';
+              echo 'window.location.href="profile";';
+              echo '</script>';
+            }
+            else if($user_type=="2")
+            {
+              echo '<script type="text/javascript">';
+              echo 'window.location.href="profile.php";';
+              echo '</script>';
+            }
+            else if($user_type=="3")
+            {
+              echo '<script type="text/javascript">';
+              echo 'window.location.href="donar.php";';
+              echo '</script>';
+            }
+            else if($user_type=="4")
+            {
+              echo '<script type="text/javascript">';
+              echo 'window.location.href="profile.php";';
+              echo '</script>';
+            }
             echo '<script type="text/javascript">';
-            echo 'window.location.href="profile.php";';
+            echo 'window.location.href="'.$url.'";';
             echo '</script>';
           }
         ?>

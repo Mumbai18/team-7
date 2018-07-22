@@ -82,7 +82,7 @@
   <!-- Content Wrapper. Contains page content -->
 
   <div class="content-wrapper">
-    <div class="modal fade bd-example-modal-lg error" id="success" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg success" id="success" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg1">
         <div class="modal-content" style="width:100%:">
           <div class="modal-header">
@@ -189,7 +189,7 @@
              {
                  //echo '<b style="color:red;">&nbsp Please Select File</b>';
              }
-            $name=@$_FILES['file3']['name'];
+          $name=@$_FILES['file3']['name'];
           $tmp_name=@$_FILES['file3']['tmp_name'];
           $size=@$_FILES['file3']['size'];
           $type=@$_FILES['file3']['type'];
@@ -211,11 +211,11 @@
 
                 if(move_uploaded_file($tmp_name,$location.'/'.$user_id.'.jpg'))
           		   {
-                    $appquery="INSERT INTO application VALUES('','".$user_id."','1','".$row1['institute']."','".$row1['typeedu']."','".$row1['result']."','".$row1['income']."','2017','".$row1['occupation']."','','','','')";
+                    $appquery="INSERT INTO application VALUES('','".$user_id."','1','".$rows['institute']."','".$rows['typeedu']."','".$rows['result']."','".$rows['income']."','2017','".$rows['occupation']."','','','','')";
 
                     if($query_run=mysqli_query($con,$appquery))
                     {
-                      $url='../file_upload.php#success'';
+                      $url='./file_upload.php#success';
                     	echo '<script type="text/javascript">';
                     	echo 'window.location.href="'.$url.'";';
                     	echo '</script>';
@@ -397,7 +397,7 @@
       <?php
       }
       else {
-        $url='../login.php';
+        $url='./login.php';
       	echo '<script type="text/javascript">';
       	echo 'window.location.href="'.$url.'";';
       	echo '</script>';
@@ -421,3 +421,11 @@
    include'footer.php';
 
 ?>
+<!--<script>
+  //shortcut for $(document).ready
+  var hash = window.location.hash;
+  if (hash.substring(1) == 'success')
+  {
+      $(hash).modal('toggle');
+  }
+</script>-->

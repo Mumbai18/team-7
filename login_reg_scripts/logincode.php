@@ -13,7 +13,7 @@
      $password_hash=md5($password);
      if(!empty($email) && !empty($password))
      {
-       $query="SELECT id,email FROM login WHERE email='".mysqli_real_escape_string($con,$email)."' AND password='".mysqli_real_escape_string($con,$password_hash)."'";
+       $query="SELECT id,email,type FROM login WHERE email='".mysqli_real_escape_string($con,$email)."' AND password='".mysqli_real_escape_string($con,$password_hash)."'";
        if($query_run=mysqli_query($con,$query))
        {
          $query_num=mysqli_num_rows($query_run);
@@ -39,6 +39,7 @@
             $ip=$remote_addr;
           }
           $user_id=mysqli_result($query_run,0,'id');
+
           date_default_timezone_set("Asia/Kolkata");
    	           $datetime=date("y/m/d h:i:s"); //create date time
                 $url="../login.php";
@@ -47,6 +48,7 @@
              $_SESSION['user_id']=$user_id;
              if(isset($_SESSION['user_id']))
              {
+
                echo '<script type="text/javascript">';
                echo 'window.location.href="'.$url.'";';
                echo '</script>';

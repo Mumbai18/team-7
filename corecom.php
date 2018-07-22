@@ -1,5 +1,5 @@
 <?php
-  include'all.php';
+   include'all.php';
 ?>
 <style>
   .bg-title{
@@ -80,7 +80,7 @@
           <!-- /.box-header -->
           <div class="box-body">
             <div class="row">
-              
+             
             </div>
             <!-- /.row -->
           </div>
