@@ -145,7 +145,7 @@
             else if($user_type=="2")
             {
               echo '<script type="text/javascript">';
-              echo 'window.location.href="profile.php";';
+              echo 'window.location.href="admindash/pages/widgets.php";';
               echo '</script>';
             }
             else if($user_type=="3")

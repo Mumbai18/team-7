@@ -306,7 +306,7 @@ require 'assets/backend/data.php';
       <li class="header">What we have</li>
         <?php if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){ if($user_type==1){ ?>
         <li><a href="profile.php"><i class="fa fa-user"></i> <span>Your Profile</span></a></li>
-        <li><a href="#"><i class="fa fa-calendar-o"></i> <span>Check Application Status</span></a></li>
+        <li><a href="status.php?id=<?php echo $_SESSION["user_id"];?>"><i class="fa fa-calendar-o"></i> <span>Check Application Status</span></a></li>
         <li><a href="personal_details.php"><i class="fa fa-shopping-cart"></i> <span>Apply for Application</span></a></li>
         <?php
         }

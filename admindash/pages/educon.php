@@ -104,18 +104,10 @@ include('connection.php');
         <?php
         include('connection.php');
 
-                              $get_user="SELECT login.id,login.firstname,login.surname,login.email,application.incomescore,application.acadscore,application.Status from application,login where application.id=login.id AND application.Status!='1'";
+                              $get_user="SELECT login.id,login.firstname,login.surname,login.email,application.incomescore,application.acadscore from application,login where application.id=login.id AND application.corestatus='1'";
                               $query=mysqli_query($conn,$get_user);
                             while($row=mysqli_fetch_array($query)){
                               $name=$row['firstname'];
-                              $status="";
-                              if($row['Status']=="2")
-                              {
-                                $status="Accepted";
-                              }else if($row['Status']=="3")
-                              {
-                                $status="Rejected";
-                              }
                                   echo " <div class='col-md-4'>
           <div class='box box-widget widget-user'>
             <div class='widget-user-header bg-aqua-active'>
@@ -141,8 +133,8 @@ include('connection.php');
                 </div>
                 <div class='ol-sm-4'>
                   <div class='description-block'>
-                    <h5 class='description-header'>".$status."</h5>
-                    <span class='description-text'>Educon Committee Status</span>
+                    <h5 class='description-header'>".$row['incomescore']."</h5>
+                    <span class='description-text'>Attitude</span>
                   </div>
                 </div>
               </div>

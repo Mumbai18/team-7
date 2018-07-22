@@ -80,7 +80,7 @@
       <div class="col-md-12" style="padding-left:10px;padding-right:10px;">
         <div class="box boxzol" style="">
           <div class="box-header with-border bg-title2" style="">
-            
+
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -95,9 +95,9 @@ if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']))
       $query_run=mysqli_query($con,$query);
 
        $status=mysqli_fetch_assoc($query_run);
-       
 
-     
+
+
     }
 ?>
 <style type="text/css">
@@ -157,7 +157,7 @@ if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']))
     {
       ?>
     <ul>
-      <li class="list active">1</li>
+      <li class="list active" >1</li>
       <li class="list">2</li>
       <li class="list">3</li>
          </ul>
@@ -169,7 +169,7 @@ if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']))
       <li class="list active">1</li>
       <li class="list active">2</li>
       <li class="list">3</li>
-         </ul> 
+         </ul>
       <?php
      }else if($status["Status"]=="3")
     {
@@ -178,7 +178,7 @@ if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']))
       <li class="list active">1</li>
       <li class="list active">2</li>
       <li class="list active">3</li>
-        </ul>  
+        </ul>
       <?php
      }
    }
